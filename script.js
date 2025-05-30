@@ -294,17 +294,35 @@ function generateRecurringMonthlyTransactions() {
   });
 
   // Wiener Linien Jahreskarte (Annual Ticket - Monthly Cost)
-  const annualTicketCost = 365.0;
-  const monthlyTicketCost = (annualTicketCost / 12).toFixed(2);
+  // const annualTicketCost = 365.0; // Original calculation
+  // const monthlyTicketCost = (annualTicketCost / 12).toFixed(2); // Original calculation
+
   fixedTransactions.push({
     id: `transport-${currentYear}-${currentMonth + 1}-10`,
     merchant: "Wiener Linien",
     category: "Transport",
-    amount: `-€${monthlyTicketCost}`,
+    amount: "-€33.00", // Updated amount
     date: formatDate(new Date(currentYear, currentMonth, 10)),
     icon: "fas fa-bus",
     color: "#6c757d", // Grey
-    receipt: null,
+    receipt: {
+      items: [
+        {
+          name: "Jahreskarte 1x",
+          quantity: 1,
+          unit_price_gross: 33.0,
+          unit_price_net: 29.7,
+          line_total_gross: 33.0,
+          line_total_net: 29.7,
+          tax_rate_percent: 10,
+          line_tax_amount: 3.3,
+          label: "",
+        },
+      ],
+      subtotal_net: "29.70",
+      tax: "3.30",
+      total: "33.00",
+    },
     label: "Wiener Linien Monthly Ticket Cost May 2025",
   });
 
