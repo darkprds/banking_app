@@ -1,180 +1,3 @@
-// Sample transaction data (mock data for demonstration)
-const transactions = [
-  {
-    id: "1",
-    merchant: "Apple Store",
-    amount: "-€49.99",
-    date: "Today",
-    category: "Online Purchase",
-    icon: "fas fa-shopping-cart",
-    color: "#0078d7",
-    receipt: {
-      items: [
-        { name: "Apple Music Subscription (1 month)", price: "€9.99" },
-        { name: "App Store Purchase (Game)", price: "€40.00" },
-      ],
-      subtotal: "€49.99",
-      tax: "€0.00",
-      total: "€49.99",
-    },
-  },
-  {
-    id: "2",
-    merchant: "Salary Deposit",
-    amount: "+€3,450.00",
-    date: "Yesterday",
-    category: "Monthly Salary",
-    icon: "fas fa-money-check-alt",
-    color: "#28a745",
-    receipt: {
-      items: [
-        { name: "Gross Salary", price: "€4,500.00" },
-        { name: "Tax Deduction", price: "-€800.00" },
-        { name: "Social Security", price: "-€250.00" },
-      ],
-      subtotal: "€3,450.00",
-      tax: "€0.00",
-      total: "€3,450.00",
-    },
-  },
-  {
-    id: "3",
-    merchant: "Coffee Shop",
-    amount: "-€4.50",
-    date: "27 Oct",
-    category: "Daily Expense",
-    icon: "fas fa-coffee",
-    color: "#e74c3c",
-    receipt: {
-      items: [
-        { name: "Latte", price: "€3.00" },
-        { name: "Croissant", price: "€1.50" },
-      ],
-      subtotal: "€4.50",
-      tax: "€0.00",
-      total: "€4.50",
-    },
-  },
-  {
-    id: "4",
-    merchant: "Supermarket",
-    amount: "-€75.20",
-    date: "26 Oct",
-    category: "Groceries",
-    icon: "fas fa-shopping-basket",
-    color: "#f39c12",
-    receipt: {
-      items: [
-        { name: "Groceries", price: "€70.00" },
-        { name: "Plastic Bags", price: "€0.20" },
-        { name: "Tax", price: "€5.00" },
-      ],
-      subtotal: "€70.20",
-      tax: "€5.00",
-      total: "€75.20",
-    },
-  },
-  {
-    id: "5",
-    merchant: 'Restaurant "Taste of Asia"',
-    amount: "-€35.00",
-    date: "25 Oct",
-    category: "Dining Out",
-    icon: "fas fa-utensils",
-    color: "#9b59b6",
-    receipt: {
-      items: [
-        { name: "Pad Thai", price: "€15.00" },
-        { name: "Spring Rolls", price: "€8.00" },
-        { name: "Soft Drink", price: "€4.00" },
-        { name: "Service Charge", price: "€8.00" },
-      ],
-      subtotal: "€27.00",
-      tax: "€0.00",
-      total: "€35.00",
-    },
-  },
-  {
-    id: "6",
-    merchant: "Online Clothing Store",
-    amount: "-€120.00",
-    date: "24 Oct",
-    category: "Shopping",
-    icon: "fas fa-tshirt",
-    color: "#34495e",
-    receipt: {
-      items: [
-        { name: "T-Shirt", price: "€30.00" },
-        { name: "Jeans", price: "€70.00" },
-        { name: "Shipping", price: "€20.00" },
-      ],
-      subtotal: "€100.00",
-      tax: "€0.00",
-      total: "€120.00",
-    },
-  },
-  {
-    id: "7",
-    merchant: "Public Transport",
-    amount: "-€2.80",
-    date: "24 Oct",
-    category: "Transportation",
-    icon: "fas fa-bus",
-    color: "#3498db",
-    receipt: {
-      items: [{ name: "Bus Fare", price: "€2.80" }],
-      subtotal: "€2.80",
-      tax: "€0.00",
-      total: "€2.80",
-    },
-  },
-  {
-    id: "8",
-    merchant: "Gym Membership",
-    amount: "-€45.00",
-    date: "23 Oct",
-    category: "Health & Fitness",
-    icon: "fas fa-dumbbell",
-    color: "#27ae60",
-    receipt: {
-      items: [{ name: "Monthly Membership Fee", price: "€45.00" }],
-      subtotal: "€45.00",
-      tax: "€0.00",
-      total: "€45.00",
-    },
-  },
-  {
-    id: "9",
-    merchant: 'Bookstore "The Reading Nook"',
-    amount: "-€18.50",
-    date: "22 Oct",
-    category: "Entertainment",
-    icon: "fas fa-book",
-    color: "#8e44ad",
-    receipt: {
-      items: [{ name: 'Novel "The Silent Patient"', price: "€18.50" }],
-      subtotal: "€18.50",
-      tax: "€0.00",
-      total: "€18.50",
-    },
-  },
-  {
-    id: "10",
-    merchant: "Electricity Bill",
-    amount: "-€60.00",
-    date: "21 Oct",
-    category: "Utilities",
-    icon: "fas fa-lightbulb",
-    color: "#f1c40f",
-    receipt: {
-      items: [{ name: "Electricity Consumption (Oct)", price: "€60.00" }],
-      subtotal: "€60.00",
-      tax: "€0.00",
-      total: "€60.00",
-    },
-  },
-];
-
 // Function to generate random date within a range
 function getRandomDate(start, end) {
   const date = new Date(
@@ -189,117 +12,300 @@ function getRandomDate(start, end) {
     .replace(/ /g, " ");
 }
 
-// Function to generate a random amount
+// Function to generate a random amount (now primarily used for initial values, not receipt totals)
 function getRandomAmount(min, max) {
   return (Math.random() * (max - min) + min).toFixed(2);
 }
 
-// Function to generate random receipt items
-function generateRandomReceiptItems() {
-  const itemOptions = [
-    { name: "Coffee", price: 3.5 },
-    { name: "Sandwich", price: 6.0 },
-    { name: "Book", price: 15.0 },
+// Pool of items categorized for more realistic receipts
+const itemPool = {
+  Groceries: [
+    { name: "Milk", price: 1.2 },
+    { name: "Bread", price: 2.5 },
+    { name: "Eggs (dozen)", price: 3.0 },
+    { name: "Apples (kg)", price: 2.0 },
+    { name: "Chicken Breast (kg)", price: 8.0 },
+    { name: "Pasta", price: 1.8 },
+    { name: "Cheese", price: 4.5 },
+    { name: "Yogurt", price: 2.2 },
+    { name: "Orange Juice", price: 3.0 },
+    { name: "Cereal", price: 4.0 },
+    { name: "Coffee Beans", price: 7.5 },
+    { name: "Fresh Vegetables", price: 5.0 },
+  ],
+  "Daily Expense": [
+    { name: "Latte", price: 3.5 },
+    { name: "Croissant", price: 1.5 },
+    { name: "Lunch Sandwich", price: 6.0 },
+    { name: "Snack Bar", price: 2.0 },
+    { name: "Bottled Water", price: 1.0 },
+    { name: "Newspaper", price: 1.8 },
+  ],
+  Shopping: [
     { name: "T-Shirt", price: 25.0 },
-    { name: "Groceries", price: 50.0 },
-    { name: "Movie Ticket", price: 10.0 },
-    { name: "Bus Ticket", price: 2.5 },
-    { name: "Software License", price: 99.0 },
-  ];
+    { name: "Jeans", price: 70.0 },
+    { name: "Sneakers", price: 80.0 },
+    { name: "Novel", price: 18.0 },
+    { name: "Phone Case", price: 20.0 },
+    { name: "Headphones", price: 45.0 },
+  ],
+  Electronics: [
+    { name: "USB-C Cable", price: 10.0 },
+    { name: "Power Bank", price: 30.0 },
+    { name: "Wireless Mouse", price: 25.0 },
+    { name: "Keyboard", price: 60.0 },
+    { name: "Screen Protector", price: 15.0 },
+  ],
+  Entertainment: [
+    { name: "Movie Ticket", price: 12.0 },
+    { name: "Concert Ticket", price: 50.0 },
+    { name: "Streaming Service (1 month)", price: 10.0 },
+    { name: "Video Game", price: 40.0 },
+    { name: "Board Game", price: 35.0 },
+  ],
+  Transportation: [
+    { name: "Bus Ticket", price: 2.8 },
+    { name: "Train Ticket", price: 7.5 },
+    { name: "Fuel (20L)", price: 36.0 },
+    { name: "Taxi Ride", price: 15.0 },
+    { name: "Metro Pass (daily)", price: 8.0 },
+  ],
+  "Health & Fitness": [
+    { name: "Protein Powder", price: 25.0 },
+    { name: "Gym Day Pass", price: 15.0 },
+    { name: "Vitamins", price: 20.0 },
+    { name: "Yoga Class", price: 18.0 },
+    { name: "Sports Drink", price: 3.0 },
+  ],
+  Home: [
+    { name: "Cleaning Supplies", price: 15.0 },
+    { name: "Lightbulb (LED)", price: 5.0 },
+    { name: "Small Appliance", price: 60.0 },
+    { name: "Dish Soap", price: 4.0 },
+    { name: "Laundry Detergent", price: 12.0 },
+  ],
+  Utilities: [
+    { name: "Electricity Usage", price: 60.0 },
+    { name: "Water Bill", price: 30.0 },
+    { name: "Internet Service", price: 45.0 },
+  ],
+  "Dining Out": [
+    { name: "Pizza", price: 18.0 },
+    { name: "Sushi Set", price: 25.0 },
+    { name: "Burger & Fries", price: 14.0 },
+    { name: "Fine Dining Meal", price: 70.0 },
+  ],
+  "Online Purchase": [
+    { name: "Software Subscription", price: 19.99 },
+    { name: "E-book", price: 9.99 },
+    { name: "Online Course", price: 150.0 },
+  ],
+  Other: [
+    { name: "Miscellaneous Item", price: 10.0 },
+    { name: "Service Fee", price: 5.0 },
+    { name: "Donation", price: 20.0 },
+  ],
+};
+
+/**
+ * Generates random receipt items based on a given category.
+ * @param {string} category The category of the transaction (e.g., 'Groceries', 'Shopping').
+ * @returns {Object} An object containing items, subtotal, tax, and total.
+ */
+function generateRandomReceiptItems(category) {
+  const relevantItems = itemPool[category] || itemPool["Other"];
   const numItems = Math.floor(Math.random() * 3) + 1; // 1 to 3 items
   const items = [];
   let subtotal = 0;
 
   for (let i = 0; i < numItems; i++) {
-    const item = itemOptions[Math.floor(Math.random() * itemOptions.length)];
-    items.push({ name: item.name, price: `€${item.price.toFixed(2)}` });
-    subtotal += item.price;
+    const item =
+      relevantItems[Math.floor(Math.random() * relevantItems.length)];
+    const quantity = Math.floor(Math.random() * 2) + 1; // 1 or 2 quantity
+    const itemPrice = item.price * quantity;
+    items.push({
+      name: `${item.name} (x${quantity})`,
+      price: `€${itemPrice.toFixed(2)}`,
+    });
+    subtotal += itemPrice;
   }
 
   const taxRate = 0.05; // 5% tax
   const tax = subtotal * taxRate;
-  const total = subtotal + tax;
+  const totalNumeric = subtotal + tax; // Store numeric total
 
   return {
     items: items,
     subtotal: `€${subtotal.toFixed(2)}`,
     tax: `€${tax.toFixed(2)}`,
-    total: `€${total.toFixed(2)}`,
+    total: `€${totalNumeric.toFixed(2)}`, // Store formatted total
+    totalNumeric: totalNumeric, // Also return the numeric total
   };
 }
 
-// Generate hundreds of additional transactions
-const additionalTransactions = [];
-const merchants = [
-  "Cafe Latte",
-  "Grocery Mart",
-  "Fashion Hub",
-  "Tech Gadgets",
-  "Book Haven",
-  "Fitness First",
-  "Travel Co.",
-  "Home Essentials",
-];
-const categories = [
-  "Daily Expense",
-  "Groceries",
-  "Shopping",
-  "Electronics",
-  "Entertainment",
-  "Health & Fitness",
-  "Travel",
-  "Home",
-];
-const icons = [
-  "fas fa-coffee",
-  "fas fa-shopping-basket",
-  "fas fa-tshirt",
-  "fas fa-laptop",
-  "fas fa-book",
-  "fas fa-dumbbell",
-  "fas fa-plane",
-  "fas fa-couch",
-];
-const colors = [
-  "#e74c3c",
-  "#f39c12",
-  "#34495e",
-  "#1abc9c",
-  "#8e44ad",
-  "#27ae60",
-  "#3498db",
-  "#95a5a6",
-];
+// Initialize transactions array
+const transactions = [];
 
-const startDate = new Date(2023, 0, 1); // Jan 1, 2023
-const endDate = new Date(); // Today
+// Merchants, categories, icons, and colors for dynamic transactions
+const dynamicMerchants = {
+  Groceries: ["SuperMart", "FreshFoods", "BioMarket"],
+  "Daily Expense": ["Coffee Corner", "Daily Bites", "QuickStop"],
+  Shopping: ["Fashion Trends", "Bookworm Store", "Gadget World"],
+  Electronics: ["ElectroZone", "TechGadgets Pro"],
+  Entertainment: ["Cinema City", "Game Central", "Concert Hall"],
+  Transportation: ["City Transport", "Fuel Station", "Taxi Service"],
+  "Health & Fitness": ["Gym Central", "Health Pharmacy", "Sports Shop"],
+  Home: ["Home Decor", "Hardware Store"],
+  "Dining Out": ["Italian Bistro", "Sushi Place", "Burger Joint"],
+  "Online Purchase": ["Global Online Store", "App Market"],
+  Other: ["Local Charity", "Random Shop"],
+};
 
-for (let i = 11; i <= 250; i++) {
-  // Generate 240 additional transactions
-  const isExpense = Math.random() < 0.8; // 80% chance of being an expense
-  const amount = isExpense
-    ? -getRandomAmount(5, 200)
-    : getRandomAmount(50, 500);
-  const merchant = merchants[Math.floor(Math.random() * merchants.length)];
-  const category = categories[Math.floor(Math.random() * categories.length)];
-  const icon = icons[Math.floor(Math.random() * icons.length)];
-  const color = colors[Math.floor(Math.random() * colors.length)];
-  const date = getRandomDate(startDate, endDate);
-  const receipt = generateRandomReceiptItems();
+const dynamicCategories = Object.keys(dynamicMerchants);
+const categoryIcons = {
+  Groceries: "fas fa-shopping-basket",
+  "Daily Expense": "fas fa-coffee",
+  Shopping: "fas fa-tshirt",
+  Electronics: "fas fa-laptop",
+  Entertainment: "fas fa-gamepad",
+  Transportation: "fas fa-bus",
+  "Health & Fitness": "fas fa-dumbbell",
+  Home: "fas fa-home",
+  "Dining Out": "fas fa-utensils",
+  "Online Purchase": "fas fa-shopping-cart",
+  Other: "fas fa-question-circle",
+};
+const categoryColors = {
+  Groceries: "#f39c12", // Orange
+  "Daily Expense": "#e74c3c", // Red
+  Shopping: "#34495e", // Dark Blue/Grey
+  Electronics: "#1abc9c", // Turquoise
+  Entertainment: "#8e44ad", // Purple
+  Transportation: "#3498db", // Blue
+  "Health & Fitness": "#27ae60", // Green
+  Home: "#95a5a6", // Grey
+  "Dining Out": "#9b59b6", // Amethyst
+  "Online Purchase": "#0078d7", // Microsoft Blue
+  Other: "#7f8c8d", // Dark Grey
+};
 
-  additionalTransactions.push({
-    id: `${i}`,
-    merchant: merchant,
-    amount: `${isExpense ? "" : "+"}${amount}`,
-    date: date,
-    category: category,
-    icon: icon,
-    color: color,
-    receipt: receipt,
+// --- Add Recurring Monthly Transactions (past 12 months) ---
+const today = new Date();
+for (let i = 0; i < 12; i++) {
+  // For the last 12 months
+  const currentMonth = new Date(today.getFullYear(), today.getMonth() - i, 1);
+
+  // Salary (always on the 25th)
+  const salaryDate = new Date(
+    currentMonth.getFullYear(),
+    currentMonth.getMonth(),
+    25
+  );
+  transactions.push({
+    id: `salary-${transactions.length + 1}`,
+    merchant: "Employer Inc.",
+    amount: "+€3,450.00",
+    date: salaryDate
+      .toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      })
+      .replace(/ /g, " "),
+    category: "Monthly Salary",
+    icon: "fas fa-money-check-alt",
+    color: "#28a745", // Green
+    receipt: null, // No receipt details for salary
+  });
+
+  // Rent (always on the 1st)
+  const rentDate = new Date(
+    currentMonth.getFullYear(),
+    currentMonth.getMonth(),
+    1
+  );
+  transactions.push({
+    id: `rent-${transactions.length + 1}`,
+    merchant: "Landlord Co.",
+    amount: "-€950.00",
+    date: rentDate
+      .toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      })
+      .replace(/ /g, " "),
+    category: "Housing",
+    icon: "fas fa-home",
+    color: "#e67e22", // Orange-brown
+    receipt: null, // No receipt details for rent
+  });
+
+  // Electricity Bill (always on the 15th)
+  const electricityDate = new Date(
+    currentMonth.getFullYear(),
+    currentMonth.getMonth(),
+    15
+  );
+  transactions.push({
+    id: `electricity-${transactions.length + 1}`,
+    merchant: "PowerGrid Utilities",
+    amount: "-€60.00",
+    date: electricityDate
+      .toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      })
+      .replace(/ /g, " "),
+    category: "Utilities",
+    icon: "fas fa-lightbulb",
+    color: "#f1c40f", // Yellow
+    receipt: null, // No receipt details for utility bills
   });
 }
 
-transactions.push(...additionalTransactions);
+// --- Generate remaining dynamic transactions to reach 100 total ---
+const startDate = new Date(2023, 0, 1); // Jan 1, 2023
+const endDate = new Date(); // Today
+
+const numDynamicTransactionsNeeded = 100 - transactions.length; // Calculate how many more are needed
+
+for (let i = 0; i < numDynamicTransactionsNeeded; i++) {
+  const transactionId = `dynamic-${transactions.length + 1}`;
+  const randomCategory =
+    dynamicCategories[Math.floor(Math.random() * dynamicCategories.length)];
+  const randomMerchant =
+    dynamicMerchants[randomCategory][
+      Math.floor(Math.random() * dynamicMerchants[randomCategory].length)
+    ];
+  const randomIcon = categoryIcons[randomCategory];
+  const randomColor = categoryColors[randomCategory];
+  const date = getRandomDate(startDate, endDate);
+
+  const isExpense = Math.random() < 0.9; // Higher chance of being an expense
+  const receiptData = generateRandomReceiptItems(randomCategory); // Get receipt and numeric total
+  const amount = isExpense
+    ? -receiptData.totalNumeric
+    : receiptData.totalNumeric;
+
+  transactions.push({
+    id: transactionId,
+    merchant: randomMerchant,
+    amount: `${isExpense ? "" : "+"}${amount.toFixed(2)}`, // Format amount here
+    date: date,
+    category: randomCategory,
+    icon: randomIcon,
+    color: randomColor,
+    receipt: {
+      // Reconstruct receipt to only include what's needed
+      items: receiptData.items,
+      subtotal: receiptData.subtotal,
+      tax: receiptData.tax,
+      total: receiptData.total,
+    },
+  });
+}
 
 let displayedTransactions = 5; // Number of transactions initially displayed
 let myChart; // Variable to hold the Chart.js instance

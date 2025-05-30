@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #f0f2f5;
   display: flex;
   justify-content: center;
@@ -175,20 +175,41 @@ body {
   gap: 15px;
   padding-bottom: 15px;
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  scrollbar-width: none; /* Firefox */
+}
+
+.accounts-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .account-card {
   flex: 0 0 250px;
-  background: linear-gradient(45deg, #2c7be5, #5540e8);
+  background: linear-gradient(
+    135deg,
+    #3b4ed9 0%,
+    #e4309c 100%
+  ); /* Updated gradient for a premium, metallic look inspired by the image */
   color: #fff;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    /* Existing outer shadow */ inset 0 1px 1px rgba(255, 255, 255, 0.3),
+    /* Inner highlight for metallic effect */ inset 0 -1px 1px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
   position: relative;
   min-height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border to enhance metallic look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for hover effects */
+}
+
+.account-card:hover {
+  transform: translateY(-5px) rotateX(5deg); /* Lift and tilt effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2),
+    /* Enhanced outer shadow on hover */ inset 0 1px 1px
+      rgba(255, 255, 255, 0.3),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .account-type {
@@ -218,8 +239,8 @@ body {
 
 .card-chip {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 110px;
+  right: 30px;
   font-size: 30px;
   opacity: 0.7;
 }
@@ -318,7 +339,7 @@ body {
 
 .transaction-amount {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 15px;
   color: #e74c3c; /* Default for expenses */
 }
 
@@ -347,17 +368,20 @@ body {
 .stats-container {
   display: flex;
   gap: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   overflow-x: auto; /* Allow horizontal scrolling for stats */
   padding-bottom: 10px;
 }
 
 .stat-card {
-  flex: 0 0 150px; /* Fixed width for stat cards */
+  flex: 1 1 auto; /* Allow flexible width instead of fixed */
+  min-width: 120px; /* Minimum width to ensure readability */
   background-color: #f8f8f8;
   padding: 15px;
+  margin-bottom: 0;
   border-radius: 15px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* Prevent internal scrolling */
 }
 
 .stat-title {
@@ -496,10 +520,11 @@ body {
 
 .form-control input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
+  appearance: textfield; /* Standard */
 }
 
-.form-control input::-webkit-outer-spin-button,
-.form-control input::-webkit-inner-spin-button {
+.form-control input[type="number"]::-webkit-outer-spin-button,
+.form-control input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -512,7 +537,7 @@ body {
   appearance: none; /* Remove default arrow */
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%20viewBox%3D%220%200%20292.4%20292.4%22%3E%3Cpath%20fill%3D%22%23777%22%20d%3D%22M287%2C197.9L159.2%2C69.2c-3.7-3.7-9.8-3.7-13.5%2C0L5.4%2C197.9c-3.7%2C3.7-3.7%2C9.8%2C0%2C13.5l14.3%2C14.3c3.7%2C3.7%2C9.8%2C3.7%2C13.5%2C0l110-110l110%2C110c3.7%2C3.7%2C9.8%2C3.7%2C13.5%2C0l14.3-14.3C290.7%2C207.7%2C290.7%2C201.6%2C287%2C197.9z%22%2F%3E%3C%2Fsvg%3E');
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%20viewBox%3D%220%200%20292.4%20292.4%22%3E%3Cpath%20fill%3D%22%23777%22%20d%3D%22M287%2C197.9L159.2%2C69.2c-3.7-3.7-9.8-3.7-13.5%2C0L5.4%2C197.9c-3.7%2C3.7-3.7%2C9.8%2C0%2C13.5l14.3%2C14.3c3.7%2C3.7%2C9.8%2C3.7%2C13.5%2C0l110-110l110%2C110c3.7%2C3.7%2C9.8%2C3.7%2C13.5%2C0l14.3-14.3C290.7%2C207.7%2C290.7%2C201.6%2C287%2C197.9z%22%2F%3E%3C%2Fsvg%3E");
   background-repeat: no-repeat;
   background-position: right 10px top 50%;
   background-size: 12px auto;
@@ -720,6 +745,9 @@ body {
   padding: 20px 0;
   margin-bottom: 20px;
 }
+.app-content .section-title {
+  z-index: -9999;
+}
 
 .receipt-section-title {
   font-size: 16px;
@@ -799,7 +827,7 @@ body {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
 }
@@ -809,7 +837,7 @@ body {
   margin: auto;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   width: 80%; /* Could be responsive */
   max-width: 300px;
   text-align: center;
@@ -885,39 +913,39 @@ body {
 /* Responsive adjustments */
 @media (max-width: 400px) {
   .iphone-frame {
-      width: 100%;
-      height: 100%;
-      border-radius: 0;
-      margin: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    margin: 0;
   }
 
   .screen {
-      border-radius: 0;
-      margin: 0;
+    border-radius: 0;
+    margin: 0;
   }
 
   .notch {
-      display: none; /* Hide notch on very small screens if it obstructs content */
+    display: none; /* Hide notch on very small screens if it obstructs content */
   }
 
   .app-content {
-      padding: 15px;
+    padding: 15px;
   }
 
   .section-title {
-      font-size: 16px;
+    font-size: 16px;
   }
 
   .account-card {
-      flex: 0 0 90%; /* Make cards take more width on small screens */
+    flex: 0 0 90%; /* Make cards take more width on small screens */
   }
 
   .stats-container {
-      flex-wrap: wrap; /* Allow stats to wrap */
-      justify-content: center;
+    flex-wrap: wrap; /* Allow stats to wrap */
+    justify-content: center;
   }
 
   .stat-card {
-      flex: 0 0 45%; /* Two cards per row */
+    flex: 0 0 45%; /* Two cards per row */
   }
 }

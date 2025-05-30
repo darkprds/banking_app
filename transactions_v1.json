@@ -1,0 +1,1793 @@
+[
+  {
+    "merchant": "Amazon",
+    "category": "Online-Versandhandel",
+    "items": [
+      {
+        "name": "Crocs Unisex Classic Clog",
+        "price": 46.0,
+        "tax": 20,
+        "net_price": 38.33
+      },
+      {
+        "name": "Gildan Men\\'s Crew T-Shirts (5er-Pack)",
+        "price": 17.5,
+        "tax": 20,
+        "net_price": 14.58
+      },
+      {
+        "name": "Apple AirTag (4er-Pack)",
+        "price": 64.5,
+        "tax": 20,
+        "net_price": 53.75
+      },
+      {
+        "name": "LEGO Star Wars R2-D2 Set",
+        "price": 75.0,
+        "tax": 20,
+        "net_price": 62.5
+      },
+      {
+        "name": "Oral-B Pro 3 3000 Elektrische Zahnbürste",
+        "price": 49.9,
+        "tax": 20,
+        "net_price": 41.58
+      },
+      {
+        "name": "Samsung EVO Plus 128GB microSDXC",
+        "price": 16.99,
+        "tax": 20,
+        "net_price": 14.16
+      },
+      {
+        "name": "Fitbit Inspire 3 Fitness-Tracker",
+        "price": 99.99,
+        "tax": 20,
+        "net_price": 83.33
+      },
+      {
+        "name": "Nespresso Vertuo Next Kapselmaschine",
+        "price": 109.0,
+        "tax": 20,
+        "net_price": 90.83
+      },
+      {
+        "name": "Philips Hue White & Color Ambiance Lampe",
+        "price": 34.95,
+        "tax": 20,
+        "net_price": 29.13
+      },
+      {
+        "name": "Tefal Jamie Oliver Pfannenset (3-tlg.)",
+        "price": 99.99,
+        "tax": 20,
+        "net_price": 83.33
+      }
+    ]
+  },
+  {
+    "merchant": "Thalia",
+    "category": "Buchhandlung",
+    "items": [
+      {
+        "name": "Der Gesang der Flusskrebse",
+        "price": 12.99,
+        "tax": 10,
+        "net_price": 11.81
+      },
+      {
+        "name": "Achtsam morden",
+        "price": 10.99,
+        "tax": 10,
+        "net_price": 9.99
+      },
+      {
+        "name": "Die Mitternachtsbibliothek",
+        "price": 14.99,
+        "tax": 10,
+        "net_price": 13.63
+      },
+      {
+        "name": "Das Café am Rande der Welt",
+        "price": 8.99,
+        "tax": 10,
+        "net_price": 8.17
+      },
+      {
+        "name": "Harry Potter und der Stein der Weisen",
+        "price": 16.0,
+        "tax": 10,
+        "net_price": 14.55
+      },
+      {
+        "name": "Der kleine Prinz",
+        "price": 6.95,
+        "tax": 10,
+        "net_price": 6.32
+      },
+      {
+        "name": "1984",
+        "price": 9.99,
+        "tax": 10,
+        "net_price": 9.08
+      },
+      {
+        "name": "Sapiens: Eine kurze Geschichte der Menschheit",
+        "price": 14.99,
+        "tax": 10,
+        "net_price": 13.63
+      },
+      {
+        "name": "Die Känguru-Chroniken",
+        "price": 11.0,
+        "tax": 10,
+        "net_price": 10.0
+      },
+      {
+        "name": "Der Alchimist",
+        "price": 10.95,
+        "tax": 10,
+        "net_price": 9.95
+      }
+    ]
+  },
+  {
+    "merchant": "MediaMarkt",
+    "category": "Elektrofachgeschäft",
+    "items": [
+      {
+        "name": "Samsung Galaxy S23 5G (128GB)",
+        "price": 849.0,
+        "tax": 20,
+        "net_price": 707.5
+      },
+      {
+        "name": "Apple MacBook Air M2 (256GB)",
+        "price": 1249.0,
+        "tax": 20,
+        "net_price": 1040.83
+      },
+      {
+        "name": "Sony WH-1000XM5 Kopfhörer",
+        "price": 349.0,
+        "tax": 20,
+        "net_price": 290.83
+      },
+      {
+        "name": "LG 55\" OLED TV",
+        "price": 1099.0,
+        "tax": 20,
+        "net_price": 915.83
+      },
+      {
+        "name": "PlayStation 5 Konsole",
+        "price": 499.99,
+        "tax": 20,
+        "net_price": 416.66
+      },
+      {
+        "name": "Bosch Waschmaschine Serie 6",
+        "price": 699.0,
+        "tax": 20,
+        "net_price": 582.5
+      },
+      {
+        "name": "Philips LatteGo 5400 Kaffeevollautomat",
+        "price": 599.0,
+        "tax": 20,
+        "net_price": 499.17
+      },
+      {
+        "name": "JBL Flip 6 Bluetooth Speaker",
+        "price": 119.0,
+        "tax": 20,
+        "net_price": 99.17
+      },
+      {
+        "name": "Nespresso Inissia Kapselmaschine",
+        "price": 69.0,
+        "tax": 20,
+        "net_price": 57.5
+      },
+      {
+        "name": "TP-Link WLAN Repeater",
+        "price": 34.99,
+        "tax": 20,
+        "net_price": 29.16
+      }
+    ]
+  },
+  {
+    "merchant": "Spar",
+    "category": "Lebensmittelgeschäft",
+    "items": [
+      { "name": "Kornspitz", "price": 0.49, "tax": 10, "net_price": "" },
+      { "name": "Frische Milch 1L", "price": 1.19, "tax": 10, "net_price": "" },
+      {
+        "name": "Naturjoghurt 180g",
+        "price": 0.39,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Freilandeier 6er", "price": 2.39, "tax": 10, "net_price": "" },
+      {
+        "name": "Gouda Scheiben 150g",
+        "price": 1.99,
+        "tax": 10,
+        "net_price": ""
+      },
+      {
+        "name": "Putenaufschnitt 100g",
+        "price": 1.49,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Butter 250g", "price": 2.29, "tax": 10, "net_price": "" },
+      { "name": "Bio-Apfel 1kg", "price": 2.79, "tax": 10, "net_price": "" },
+      { "name": "Salatherzen 2er", "price": 1.49, "tax": 10, "net_price": "" },
+      { "name": "Bio-Banane Stück", "price": 0.35, "tax": 10, "net_price": "" },
+      {
+        "name": "Soda Zitrone 1,5L",
+        "price": 0.79,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Traubensaft 1L", "price": 1.99, "tax": 20, "net_price": "" },
+      {
+        "name": "Ritter Sport Schokolade",
+        "price": 1.19,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Reis 1kg", "price": 1.29, "tax": 10, "net_price": "" },
+      {
+        "name": "Lachsfilet tiefgekühlt",
+        "price": 5.49,
+        "tax": 10,
+        "net_price": ""
+      },
+      {
+        "name": "Spar Bio Vollmilch 1L",
+        "price": 1.39,
+        "tax": 10,
+        "net_price": 1.26
+      },
+      {
+        "name": "Spar Natur*pur Freilandeier 10 Stück",
+        "price": 3.29,
+        "tax": 10,
+        "net_price": 2.99
+      },
+      {
+        "name": "Rama Margarine 500g",
+        "price": 2.29,
+        "tax": 10,
+        "net_price": 2.08
+      },
+      {
+        "name": "Manner Schnitten 400g",
+        "price": 3.49,
+        "tax": 10,
+        "net_price": 3.17
+      },
+      {
+        "name": "Red Bull 0,25L",
+        "price": 1.29,
+        "tax": 20,
+        "net_price": 1.08
+      },
+      {
+        "name": "Iglo Spinat 450g",
+        "price": 2.99,
+        "tax": 10,
+        "net_price": 2.72
+      },
+      {
+        "name": "Ja! Natürlich Bio-Karotten 1kg",
+        "price": 2.49,
+        "tax": 10,
+        "net_price": 2.26
+      },
+      {
+        "name": "Coca-Cola 1,5L",
+        "price": 1.59,
+        "tax": 20,
+        "net_price": 1.33
+      },
+      {
+        "name": "Spar Natur*pur Bio-Joghurt 500g",
+        "price": 1.49,
+        "tax": 10,
+        "net_price": 1.35
+      },
+      {
+        "name": "Milka Alpenmilch 100g",
+        "price": 1.19,
+        "tax": 10,
+        "net_price": 1.08
+      },
+      {
+        "name": "Billa Apfel Golden Delicious 1kg",
+        "price": 2.29,
+        "tax": 10,
+        "net_price": 2.08
+      },
+      {
+        "name": "Spar Bio-Roggenbrot 500g",
+        "price": 2.59,
+        "tax": 10,
+        "net_price": 2.35
+      },
+      {
+        "name": "SalzburgMilch Frische Vollmilch 1L",
+        "price": 1.39,
+        "tax": 10,
+        "net_price": 1.26
+      },
+      {
+        "name": "Radatz Wiener Würstel 200g",
+        "price": 2.99,
+        "tax": 10,
+        "net_price": 2.72
+      },
+      {
+        "name": "Spar S-Budget Butter 250g",
+        "price": 2.19,
+        "tax": 10,
+        "net_price": 1.99
+      }
+    ]
+  },
+  {
+    "merchant": "Netflix",
+    "category": "Video-Streamingdienst",
+    "items": [
+      {
+        "name": "Premium-Abo (monatlich)",
+        "price": 17.99,
+        "tax": 20,
+        "net_price": 14.99
+      }
+    ]
+  },
+  {
+    "merchant": "Lieferando",
+    "category": "Online-Essenslieferdienst",
+    "items": [
+      { "name": "Pizza Margherita", "price": 9.9, "tax": 10, "net_price": "" },
+      {
+        "name": "Sushi Set (10 Stück)",
+        "price": 14.5,
+        "tax": 10,
+        "net_price": ""
+      },
+      {
+        "name": "Cheeseburger Menü",
+        "price": 11.2,
+        "tax": 10,
+        "net_price": ""
+      },
+      {
+        "name": "Chicken Korma (indisch)",
+        "price": 13.9,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Pad Thai", "price": 12.9, "tax": 10, "net_price": "" },
+      { "name": "Döner Kebab", "price": 7.5, "tax": 10, "net_price": "" },
+      { "name": "Coca Cola 0,5L", "price": 2.5, "tax": 20, "net_price": "" },
+      { "name": "Falafel Wrap", "price": 8.9, "tax": 10, "net_price": "" },
+      { "name": "Tiramisu", "price": 4.8, "tax": 10, "net_price": "" },
+      {
+        "name": "Schnitzel mit Pommes",
+        "price": 12.5,
+        "tax": 10,
+        "net_price": ""
+      }
+    ]
+  },
+  {
+    "merchant": "Zalando",
+    "category": "Modegeschäft online",
+    "items": [
+      {
+        "name": "Levi's 501 Original Jeans",
+        "price": 99.95,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Nike Air Force 1 '07 Sneakers",
+        "price": 109.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Adidas Originals Hoodie",
+        "price": 64.95,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Dr. Martens 1460 Boots",
+        "price": 189.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Tommy Hilfiger T-Shirt",
+        "price": 39.9,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Calvin Klein Bralette",
+        "price": 29.95,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Vans Old Skool Sneakers",
+        "price": 74.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Only Lederjacke", "price": 59.99, "tax": 20, "net_price": "" },
+      {
+        "name": "Jack & Jones Chinos",
+        "price": 49.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Selected Femme Mantel",
+        "price": 199.99,
+        "tax": 20,
+        "net_price": ""
+      }
+    ]
+  },
+  {
+    "merchant": "Peek&Cloppenburg",
+    "category": "Modegeschäft",
+    "items": [
+      {
+        "name": "Tommy Hilfiger Hemd",
+        "price": 69.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Boss Anzughose", "price": 149.99, "tax": 20, "net_price": "" },
+      {
+        "name": "Calvin Klein Jeans",
+        "price": 99.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Superdry T-Shirt",
+        "price": 29.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Marc O'Polo Pullover",
+        "price": 89.95,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "GANT Polo", "price": 79.99, "tax": 20, "net_price": "" },
+      {
+        "name": "Levi's Jeansjacke",
+        "price": 109.95,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Jack & Jones Chinos",
+        "price": 49.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Boss T-Shirt", "price": 39.99, "tax": 20, "net_price": "" },
+      {
+        "name": "Tommy Hilfiger Socken (3er Pack)",
+        "price": 14.99,
+        "tax": 20,
+        "net_price": ""
+      }
+    ]
+  },
+  {
+    "merchant": "Billa",
+    "category": "Lebensmittelgeschäft",
+    "items": [
+      { "name": "Vollkornbrot", "price": 2.49, "tax": 10, "net_price": "" },
+      { "name": "Bio-Milch 1L", "price": 1.39, "tax": 10, "net_price": "" },
+      {
+        "name": "Joghurt Natur 250g",
+        "price": 0.49,
+        "tax": 10,
+        "net_price": ""
+      },
+      {
+        "name": "Freilandeier 10er Pack",
+        "price": 3.79,
+        "tax": 10,
+        "net_price": ""
+      },
+      {
+        "name": "Emmentaler Käse 200g",
+        "price": 2.29,
+        "tax": 10,
+        "net_price": ""
+      },
+      {
+        "name": "Salami Aufschnitt 100g",
+        "price": 1.89,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Butter 250g", "price": 2.49, "tax": 10, "net_price": "" },
+      { "name": "Äpfel 1kg", "price": 2.99, "tax": 10, "net_price": "" },
+      { "name": "Tomaten 500g", "price": 1.79, "tax": 10, "net_price": "" },
+      { "name": "Bio-Banane Stück", "price": 0.39, "tax": 10, "net_price": "" },
+      {
+        "name": "Mineralwasser 1,5L",
+        "price": 0.39,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Orangensaft 1L", "price": 1.29, "tax": 20, "net_price": "" },
+      {
+        "name": "Milka Schokolade 100g",
+        "price": 1.29,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Nudeln 500g", "price": 0.89, "tax": 10, "net_price": "" },
+      { "name": "Thunfischdose", "price": 1.39, "tax": 10, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Hofer",
+    "category": "Lebensmittelgeschäft",
+    "items": [
+      { "name": "Kaisersemmerl", "price": 0.19, "tax": 10, "net_price": "" },
+      { "name": "Frischmilch 1L", "price": 1.09, "tax": 10, "net_price": "" },
+      { "name": "Bio-Joghurt 500g", "price": 1.29, "tax": 10, "net_price": "" },
+      {
+        "name": "Eier Freiland 10er",
+        "price": 3.29,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Bergkäse 150g", "price": 2.19, "tax": 10, "net_price": "" },
+      {
+        "name": "Putenbrustaufschnitt 100g",
+        "price": 1.29,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Butter 250g", "price": 2.19, "tax": 10, "net_price": "" },
+      { "name": "Bio-Äpfel 1kg", "price": 2.69, "tax": 10, "net_price": "" },
+      { "name": "Paprika Mix 500g", "price": 1.89, "tax": 10, "net_price": "" },
+      { "name": "Banane Stück", "price": 0.29, "tax": 10, "net_price": "" },
+      {
+        "name": "Mineralwasser 1,5L",
+        "price": 0.29,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Apfelsaft 1L", "price": 1.09, "tax": 20, "net_price": "" },
+      {
+        "name": "Choceur Schokolade 100g",
+        "price": 0.79,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Spaghetti 500g", "price": 0.79, "tax": 10, "net_price": "" },
+      {
+        "name": "Thunfisch in Öl Dose",
+        "price": 1.19,
+        "tax": 10,
+        "net_price": ""
+      }
+    ]
+  },
+  {
+    "merchant": "Lidl",
+    "category": "Lebensmittelgeschäft",
+    "items": [
+      { "name": "Sonnenblumenbrot", "price": 1.49, "tax": 10, "net_price": "" },
+      {
+        "name": "Frische Alpenmilch 1L",
+        "price": 1.15,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Joghurt 250g", "price": 0.39, "tax": 10, "net_price": "" },
+      { "name": "Bio-Eier 6er", "price": 2.19, "tax": 10, "net_price": "" },
+      {
+        "name": "Edamer Scheiben 150g",
+        "price": 1.79,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Putensalami 100g", "price": 1.19, "tax": 10, "net_price": "" },
+      { "name": "Butter 250g", "price": 1.89, "tax": 10, "net_price": "" },
+      { "name": "Äpfel 1kg", "price": 2.59, "tax": 10, "net_price": "" },
+      {
+        "name": "Kirschtomaten 250g",
+        "price": 1.29,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Banane Stück", "price": 0.29, "tax": 10, "net_price": "" },
+      {
+        "name": "Mineralwasser 1,5L",
+        "price": 0.25,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Orangensaft 1L", "price": 0.99, "tax": 20, "net_price": "" },
+      {
+        "name": "Fin Carre Schokolade 100g",
+        "price": 0.89,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Spaghetti 500g", "price": 0.65, "tax": 10, "net_price": "" },
+      {
+        "name": "Sardinen in Öl Dose",
+        "price": 0.89,
+        "tax": 10,
+        "net_price": ""
+      }
+    ]
+  },
+  {
+    "merchant": "Bipa",
+    "category": "Drogerie",
+    "items": [
+      {
+        "name": "Denkmit Waschmittel 20WL",
+        "price": 3.49,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Nivea Duschgel 250ml",
+        "price": 2.19,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Balea Shampoo 300ml",
+        "price": 1.29,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Gillette Rasierer 3er Pack",
+        "price": 6.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Dove Deospray", "price": 2.49, "tax": 20, "net_price": "" },
+      {
+        "name": "Alverde Tagescreme",
+        "price": 3.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Tempo Taschentücher 10x10",
+        "price": 1.79,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "elmex Zahnpasta", "price": 2.99, "tax": 20, "net_price": "" },
+      {
+        "name": "BIPA Wattepads 120 Stück",
+        "price": 0.79,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Balea Bodylotion 400ml",
+        "price": 2.29,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Sagrotan Desinfektionsspray",
+        "price": 3.49,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "BIPA Wattestäbchen 200 Stück",
+        "price": 0.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Fa Duschgel 250ml",
+        "price": 1.39,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Nivea Creme 150ml",
+        "price": 2.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Always Ultra Binden 10 Stück",
+        "price": 2.29,
+        "tax": 20,
+        "net_price": ""
+      }
+    ]
+  },
+  {
+    "merchant": "Etsan",
+    "category": "Lebensmittelgeschäft",
+    "items": [
+      { "name": "Pide Fladenbrot", "price": 1.29, "tax": 10, "net_price": "" },
+      { "name": "Ayran 500ml", "price": 0.99, "tax": 10, "net_price": "" },
+      { "name": "Schafskäse 200g", "price": 2.99, "tax": 10, "net_price": "" },
+      { "name": "Sucuk 100g", "price": 2.49, "tax": 10, "net_price": "" },
+      {
+        "name": "Kichererbsen Dose",
+        "price": 0.79,
+        "tax": 10,
+        "net_price": ""
+      },
+      {
+        "name": "Lammhackfleisch 500g",
+        "price": 4.99,
+        "tax": 10,
+        "net_price": ""
+      },
+      {
+        "name": "Joghurt Türkisch 1kg",
+        "price": 1.99,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Bulgur 1kg", "price": 1.79, "tax": 10, "net_price": "" },
+      {
+        "name": "Granatapfelsaft 1L",
+        "price": 2.69,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Baklava 200g", "price": 3.99, "tax": 10, "net_price": "" },
+      { "name": "Oliven 250g", "price": 1.89, "tax": 10, "net_price": "" },
+      { "name": "Paprika 500g", "price": 1.49, "tax": 10, "net_price": "" },
+      { "name": "Petersilie Bund", "price": 0.79, "tax": 10, "net_price": "" },
+      {
+        "name": "Sesampaste Tahin 300g",
+        "price": 2.49,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Datteln 250g", "price": 2.29, "tax": 10, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Post",
+    "category": "Post",
+    "items": [
+      {
+        "name": "Standardbrief Inland (bis 20g)",
+        "price": 1.2,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Maxibrief Inland (bis 1kg)",
+        "price": 2.75,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Paket Inland (bis 2kg)",
+        "price": 5.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Einschreiben Inland Zuschlag",
+        "price": 2.85,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Postkarte Europa", "price": 1.8, "tax": 20, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Essenz Apotheke Mariahilf",
+    "category": "Apotheke",
+    "items": [
+      {
+        "name": "Aspirin Tabletten 20 Stück",
+        "price": 6.99,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Nasenspray 10ml", "price": 5.49, "tax": 10, "net_price": "" },
+      {
+        "name": "Vitamin D Tropfen 10ml",
+        "price": 8.9,
+        "tax": 10,
+        "net_price": ""
+      },
+      {
+        "name": "Paracetamol 500mg 20 Stück",
+        "price": 4.99,
+        "tax": 10,
+        "net_price": ""
+      },
+      {
+        "name": "Wund- und Heilsalbe 50g",
+        "price": 7.5,
+        "tax": 10,
+        "net_price": ""
+      }
+    ]
+  },
+  {
+    "merchant": "Magenta",
+    "category": "Mobiltelefongeschäft",
+    "items": [
+      {
+        "name": "Mobile Sim Only Unlimited",
+        "price": 29.9,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Magenta TV Box", "price": 99.0, "tax": 20, "net_price": "" },
+      {
+        "name": "Internet M 300Mbit",
+        "price": 47.9,
+        "tax": 20,
+        "net_price": ""
+      }
+    ]
+  },
+  {
+    "merchant": "Apple Store",
+    "category": "Elektronikgroßmarkt",
+    "items": [
+      {
+        "name": "MacBook Air M3 13\" 256GB",
+        "price": 1299.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "iPad 10. Gen 64GB",
+        "price": 589.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Apple Watch Series 9",
+        "price": 449.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "AirPods Pro (2. Gen)",
+        "price": 279.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Apple Pencil 2. Gen",
+        "price": 149.0,
+        "tax": 20,
+        "net_price": ""
+      }
+    ]
+  },
+  {
+    "merchant": "McFit",
+    "category": "Fitness",
+    "items": [
+      {
+        "name": "Monatsmitgliedschaft",
+        "price": 29.9,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Tageskarte Fitnessstudio",
+        "price": 10.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Getränkeflatrate pro Monat",
+        "price": 5.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Personal Training Einzelstunde",
+        "price": 49.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Startpaket (Anmeldung)",
+        "price": 39.0,
+        "tax": 20,
+        "net_price": ""
+      }
+    ]
+  },
+  {
+    "merchant": "Bershka",
+    "category": "Modegeschäft",
+    "items": [
+      { "name": "Oversize T-Shirt", "price": 9.99, "tax": 20, "net_price": "" },
+      { "name": "Basic Sneakers", "price": 24.99, "tax": 20, "net_price": "" },
+      { "name": "Hoodie", "price": 25.99, "tax": 20, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Zara",
+    "category": "Modegeschäft",
+    "items": [
+      { "name": "Slim Fit Jeans", "price": 39.95, "tax": 20, "net_price": "" },
+      {
+        "name": "Oversized T-Shirt",
+        "price": 17.95,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Blazer", "price": 59.95, "tax": 20, "net_price": "" },
+      { "name": "Midi Kleid", "price": 39.95, "tax": 20, "net_price": "" },
+      { "name": "Cargo Pants", "price": 49.95, "tax": 20, "net_price": "" },
+      { "name": "Strickpullover", "price": 25.95, "tax": 20, "net_price": "" },
+      { "name": "Hoodie", "price": 29.95, "tax": 20, "net_price": "" },
+      { "name": "Bomberjacke", "price": 59.95, "tax": 20, "net_price": "" },
+      { "name": "Sneaker", "price": 39.95, "tax": 20, "net_price": "" },
+      { "name": "Hemd Regular Fit", "price": 25.95, "tax": 20, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Sportnahrung",
+    "category": "Sportnahrungsgeschäft",
+    "items": [
+      { "name": "Whey Protein 1kg", "price": 24.9, "tax": 20, "net_price": "" },
+      {
+        "name": "Creatin Monohydrat 500g",
+        "price": 14.9,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Aminosäuren Tabs", "price": 19.9, "tax": 20, "net_price": "" },
+      {
+        "name": "Proteinriegel Box (12 Stück)",
+        "price": 18.9,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Pre Workout Booster 400g",
+        "price": 27.9,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "BCAA Pulver 500g", "price": 24.9, "tax": 20, "net_price": "" },
+      {
+        "name": "Energiegel 10er Pack",
+        "price": 13.9,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Protein Pancake Mix 1kg",
+        "price": 12.9,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Zink Tabletten", "price": 8.9, "tax": 20, "net_price": "" },
+      { "name": "Shaker 700ml", "price": 5.9, "tax": 20, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Boss Mensware Store",
+    "category": "Modegeschäft",
+    "items": [
+      { "name": "Business Anzug", "price": 499.0, "tax": 20, "net_price": "" },
+      { "name": "Hemd Slim Fit", "price": 79.95, "tax": 20, "net_price": "" },
+      { "name": "Poloshirt", "price": 59.95, "tax": 20, "net_price": "" },
+      { "name": "Pullover", "price": 119.95, "tax": 20, "net_price": "" },
+      { "name": "Gürtel Leder", "price": 69.95, "tax": 20, "net_price": "" },
+      { "name": "Chinos Hose", "price": 99.95, "tax": 20, "net_price": "" },
+      { "name": "Sakko", "price": 299.0, "tax": 20, "net_price": "" },
+      { "name": "T-Shirt Logo", "price": 44.95, "tax": 20, "net_price": "" },
+      { "name": "Sneaker", "price": 159.0, "tax": 20, "net_price": "" },
+      { "name": "Wollmantel", "price": 399.0, "tax": 20, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Türkis",
+    "category": "Restaurant/Gastronomie",
+    "items": [
+      { "name": "Kebap im Brot", "price": 6.5, "tax": 10, "net_price": "" },
+      { "name": "Dürüm", "price": 7.0, "tax": 10, "net_price": "" },
+      { "name": "Kebap Box", "price": 7.5, "tax": 10, "net_price": "" },
+      { "name": "Falafel Teller", "price": 8.0, "tax": 10, "net_price": "" },
+      { "name": "Kebap Teller", "price": 9.9, "tax": 10, "net_price": "" },
+      { "name": "Baklava Stück", "price": 2.0, "tax": 10, "net_price": "" },
+      { "name": "Lahmacun", "price": 4.9, "tax": 10, "net_price": "" },
+      { "name": "Pommes klein", "price": 2.9, "tax": 10, "net_price": "" },
+      { "name": "Cola 0,5L", "price": 2.0, "tax": 20, "net_price": "" },
+      { "name": "Ayran 0,3L", "price": 1.5, "tax": 10, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Fielmann",
+    "category": "Optiker",
+    "items": [
+      {
+        "name": "Brillengestell Standard",
+        "price": 39.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Kunststoffgläser Einstärken",
+        "price": 50.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Gleitsichtgläser",
+        "price": 120.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Kontaktlinsen Monatsbox",
+        "price": 29.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Brillenetui", "price": 9.95, "tax": 20, "net_price": "" },
+      {
+        "name": "Brillenreinigungsspray",
+        "price": 4.95,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Sehtest", "price": 15.0, "tax": 20, "net_price": "" },
+      { "name": "Brillenputztuch", "price": 2.0, "tax": 20, "net_price": "" },
+      {
+        "name": "UV-Schutz Sonnenbrille",
+        "price": 29.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Augentropfen", "price": 8.95, "tax": 10, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Foot Locker",
+    "category": "Schuhgeschäft",
+    "items": [
+      {
+        "name": "Nike Air Force 1",
+        "price": 129.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Adidas Superstar",
+        "price": 109.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Puma Suede Classic",
+        "price": 79.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "New Balance 574", "price": 99.99, "tax": 20, "net_price": "" },
+      { "name": "Vans Old Skool", "price": 74.99, "tax": 20, "net_price": "" },
+      {
+        "name": "Converse Chuck Taylor All Star",
+        "price": 69.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Nike Air Max 90",
+        "price": 139.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Asics Gel-Lyte III",
+        "price": 119.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Fila Disruptor", "price": 89.99, "tax": 20, "net_price": "" },
+      {
+        "name": "Sneaker Clean Kit",
+        "price": 14.99,
+        "tax": 20,
+        "net_price": ""
+      }
+    ]
+  },
+  {
+    "merchant": "Humanic",
+    "category": "Schuhgeschäft",
+    "items": [
+      {
+        "name": "Tamaris Sandalen",
+        "price": 59.95,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Gabor Ballerinas",
+        "price": 79.95,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Nike Laufschuhe",
+        "price": 109.95,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Adidas Sneakers", "price": 89.95, "tax": 20, "net_price": "" },
+      { "name": "Högl Pumps", "price": 99.95, "tax": 20, "net_price": "" },
+      { "name": "Clarks Slipper", "price": 84.95, "tax": 20, "net_price": "" },
+      { "name": "Vagabond Boots", "price": 119.95, "tax": 20, "net_price": "" },
+      { "name": "Shoe Care Set", "price": 15.99, "tax": 20, "net_price": "" },
+      {
+        "name": "Skechers Slip-Ons",
+        "price": 74.95,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Birkenstock Arizona",
+        "price": 69.95,
+        "tax": 20,
+        "net_price": ""
+      }
+    ]
+  },
+  {
+    "merchant": "Hollister",
+    "category": "Modegeschäft",
+    "items": [
+      { "name": "Hoodie", "price": 39.99, "tax": 20, "net_price": "" },
+      { "name": "T-Shirt", "price": 19.99, "tax": 20, "net_price": "" },
+      { "name": "Slim Jeans", "price": 49.99, "tax": 20, "net_price": "" },
+      { "name": "Jogginghose", "price": 34.99, "tax": 20, "net_price": "" },
+      { "name": "Sweatjacke", "price": 44.99, "tax": 20, "net_price": "" },
+      { "name": "Bikini Oberteil", "price": 24.99, "tax": 20, "net_price": "" },
+      {
+        "name": "Boxershorts 3er Pack",
+        "price": 19.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Winterjacke", "price": 89.99, "tax": 20, "net_price": "" },
+      {
+        "name": "Sneaker Socken 5er Pack",
+        "price": 12.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Rucksack", "price": 34.99, "tax": 20, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Ikea",
+    "category": "Möbel und Home essentials",
+    "items": [
+      { "name": "BILLY Regal", "price": 49.99, "tax": 20, "net_price": "" },
+      { "name": "LACK Couchtisch", "price": 29.99, "tax": 20, "net_price": "" },
+      {
+        "name": "MALM Bettgestell 140x200cm",
+        "price": 149.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "POÄNG Sessel", "price": 99.99, "tax": 20, "net_price": "" },
+      {
+        "name": "SKUBB Boxen 6er Set",
+        "price": 7.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "LENDA Vorhangpaar",
+        "price": 24.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "KALLAX Regal", "price": 69.99, "tax": 20, "net_price": "" },
+      {
+        "name": "BEKÄM Spülschwamm 3er",
+        "price": 1.29,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "365+ Trinkglas 6er Set",
+        "price": 4.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "ANTILOP Hochstuhl",
+        "price": 19.99,
+        "tax": 20,
+        "net_price": ""
+      }
+    ]
+  },
+  {
+    "merchant": "Interspar",
+    "category": "Lebensmittelgeschäft",
+    "items": [
+      { "name": "Sonnenblumenbrot", "price": 2.39, "tax": 10, "net_price": "" },
+      {
+        "name": "Frische Bio-Milch 1L",
+        "price": 1.29,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Joghurt 250g", "price": 0.49, "tax": 10, "net_price": "" },
+      {
+        "name": "Freilandeier 10er",
+        "price": 3.99,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Bergkäse 200g", "price": 2.59, "tax": 10, "net_price": "" },
+      {
+        "name": "Putenschinken 100g",
+        "price": 1.59,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Butter 250g", "price": 2.49, "tax": 10, "net_price": "" },
+      { "name": "Äpfel 1kg", "price": 2.99, "tax": 10, "net_price": "" },
+      {
+        "name": "Kirschtomaten 250g",
+        "price": 1.39,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Banane Stück", "price": 0.35, "tax": 10, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Jack&Jones",
+    "category": "Modegeschäft",
+    "items": [
+      { "name": "Jeans Slim Fit", "price": 59.99, "tax": 20, "net_price": "" },
+      { "name": "T-Shirt Basic", "price": 14.99, "tax": 20, "net_price": "" },
+      { "name": "Sweatshirt", "price": 29.99, "tax": 20, "net_price": "" },
+      { "name": "Jacke", "price": 49.99, "tax": 20, "net_price": "" },
+      {
+        "name": "Boxershorts 3er Pack",
+        "price": 17.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Polo Shirt", "price": 19.99, "tax": 20, "net_price": "" },
+      { "name": "Chinos", "price": 39.99, "tax": 20, "net_price": "" },
+      { "name": "Strickpullover", "price": 34.99, "tax": 20, "net_price": "" },
+      { "name": "Hoodie", "price": 34.99, "tax": 20, "net_price": "" },
+      { "name": "Sneaker", "price": 49.99, "tax": 20, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Wiener Linien",
+    "category": "öffentliche Verkehrsmittel",
+    "items": [
+      { "name": "Einzelfahrschein", "price": 2.4, "tax": 10, "net_price": "" },
+      { "name": "Hunde-Einzelticket", "price": 1.2, "tax": 10, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Massi Milano",
+    "category": "Modegeschäft",
+    "items": [
+      {
+        "name": "Armbanduhr Classico",
+        "price": 149.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Armbanduhr Eleganza",
+        "price": 179.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Armband Leder", "price": 35.0, "tax": 20, "net_price": "" },
+      {
+        "name": "Chronograph Steel",
+        "price": 219.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Uhrenbox", "price": 49.0, "tax": 20, "net_price": "" },
+      {
+        "name": "Uhrenarmband Mesh",
+        "price": 29.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Quarz Damenuhr", "price": 129.0, "tax": 20, "net_price": "" },
+      { "name": "Herrenuhr Titan", "price": 199.0, "tax": 20, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Michael Kors",
+    "category": "Modegeschäft",
+    "items": [
+      {
+        "name": "Handtasche Jet Set",
+        "price": 249.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Wallet Portemonnaie",
+        "price": 99.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Damenarmbanduhr", "price": 179.0, "tax": 20, "net_price": "" },
+      { "name": "Umhängetasche", "price": 219.0, "tax": 20, "net_price": "" },
+      {
+        "name": "Sonnenbrille Damen",
+        "price": 119.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Tote Bag", "price": 289.0, "tax": 20, "net_price": "" },
+      { "name": "Parfum 50ml", "price": 69.0, "tax": 20, "net_price": "" },
+      { "name": "Herrenarmbanduhr", "price": 229.0, "tax": 20, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Nespresso",
+    "category": "Kaffeegeschäft",
+    "items": [
+      {
+        "name": "Kaffeekapseln (10 Stück)",
+        "price": 4.5,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Espressotasse Set",
+        "price": 18.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Nespresso Vertuo Next Maschine",
+        "price": 129.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Milchaufschäumer", "price": 79.0, "tax": 20, "net_price": "" },
+      { "name": "Reinigungsset", "price": 13.0, "tax": 20, "net_price": "" },
+      {
+        "name": "Lungo Kaffeekapseln",
+        "price": 4.9,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Recyclingbeutel", "price": 1.5, "tax": 20, "net_price": "" },
+      { "name": "Kapselspender", "price": 25.0, "tax": 20, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Notino",
+    "category": "Parfümerie",
+    "items": [
+      {
+        "name": "Chanel N°5 Eau de Parfum 50ml",
+        "price": 109.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Lancome La Vie Est Belle 50ml",
+        "price": 75.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Armani Code Homme 50ml",
+        "price": 62.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Versace Eros Eau de Toilette",
+        "price": 65.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "La Roche-Posay Toleriane Reinigung",
+        "price": 14.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Maybelline Lash Sensational Mascara",
+        "price": 9.5,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "NYX Professional Make-up Setting Spray",
+        "price": 8.9,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Nuxe Huile Prodigieuse 100ml",
+        "price": 24.0,
+        "tax": 20,
+        "net_price": ""
+      }
+    ]
+  },
+  {
+    "merchant": "D&M",
+    "category": "Drogerie",
+    "items": [
+      {
+        "name": "Balea Duschgel 300ml",
+        "price": 0.95,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Denkmit Waschmittel 20WL",
+        "price": 3.49,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Nivea Creme 150ml",
+        "price": 2.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Gillette Fusion Rasierer",
+        "price": 12.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Always Ultra Binden 10 Stück",
+        "price": 2.29,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "elmex Zahnpasta", "price": 2.99, "tax": 20, "net_price": "" },
+      {
+        "name": "Sagrotan Desinfektionsspray",
+        "price": 3.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "babylove Feuchttücher 80 Stück",
+        "price": 1.49,
+        "tax": 20,
+        "net_price": ""
+      }
+    ]
+  },
+  {
+    "merchant": "Müller",
+    "category": "Drogerie",
+    "items": [
+      {
+        "name": "Nivea Duschgel 250ml",
+        "price": 2.29,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Balea Shampoo 300ml",
+        "price": 1.29,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Denkmit Waschmittel 20WL",
+        "price": 3.69,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Tempo Taschentücher 10x10",
+        "price": 1.69,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "elmex Zahnpasta", "price": 2.99, "tax": 20, "net_price": "" },
+      {
+        "name": "Balea Bodylotion 400ml",
+        "price": 2.39,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Always Ultra Binden 10 Stück",
+        "price": 2.29,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Fa Deo Roll-On", "price": 1.99, "tax": 20, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Nike",
+    "category": "Sportwaren",
+    "items": [
+      {
+        "name": "Nike Air Max 90",
+        "price": 139.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Nike Trainingsshirt",
+        "price": 29.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Nike Sportshorts",
+        "price": 34.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Nike Socken 3er Pack",
+        "price": 14.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Nike Kapuzenpullover",
+        "price": 54.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Nike Trinkflasche",
+        "price": 12.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Nike Trainingshose",
+        "price": 49.99,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Nike Sporttasche", "price": 29.99, "tax": 20, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "TUI das Reisebüro",
+    "category": "Reise",
+    "items": [
+      {
+        "name": "Pauschalreise Mallorca 7 Tage",
+        "price": 950.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Flug Wien – Berlin",
+        "price": 190.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Kreuzfahrt Mittelmeer 10 Tage",
+        "price": 1590.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Städtereise Prag 3 Tage",
+        "price": 350.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Hotel Wien 2 Nächte",
+        "price": 260.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Reiserücktrittsversicherung",
+        "price": 49.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Ausflug Ägypten (ganztags)",
+        "price": 85.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Flughafentransfer", "price": 35.0, "tax": 20, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "XXXLutz",
+    "category": "Möbel und Home essentials",
+    "items": [
+      { "name": "Esstisch Holz", "price": 349.0, "tax": 20, "net_price": "" },
+      {
+        "name": "Boxspringbett 180x200cm",
+        "price": 999.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Küchenblock 2,5m",
+        "price": 1299.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Wohnlandschaft Sofa",
+        "price": 799.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      {
+        "name": "Bürostuhl ergonomisch",
+        "price": 159.0,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Garderobe Set", "price": 219.0, "tax": 20, "net_price": "" },
+      {
+        "name": "Lattenrost 90x200cm",
+        "price": 79.9,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "LED Stehlampe", "price": 69.9, "tax": 20, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Cafe Central",
+    "category": "Cafe",
+    "items": [
+      { "name": "Melange", "price": 5.2, "tax": 10, "net_price": "" },
+      { "name": "Verlängerter", "price": 4.8, "tax": 10, "net_price": "" },
+      { "name": "Apfelstrudel", "price": 5.8, "tax": 10, "net_price": "" },
+      { "name": "Sachertorte Stück", "price": 6.2, "tax": 10, "net_price": "" },
+      { "name": "Gulaschsuppe", "price": 8.2, "tax": 10, "net_price": "" },
+      { "name": "Belegte Semmel", "price": 3.8, "tax": 10, "net_price": "" },
+      { "name": "Cappuccino", "price": 5.5, "tax": 10, "net_price": "" },
+      {
+        "name": "Mineralwasser 0,33L",
+        "price": 3.2,
+        "tax": 20,
+        "net_price": ""
+      }
+    ]
+  },
+  {
+    "merchant": "Goldener Papagei",
+    "category": "Cafe",
+    "items": [
+      { "name": "Kaffee Creme", "price": 4.5, "tax": 10, "net_price": "" },
+      { "name": "Espresso", "price": 2.9, "tax": 10, "net_price": "" },
+      { "name": "Brownie", "price": 4.2, "tax": 10, "net_price": "" },
+      {
+        "name": "Schinken-Käse Toast",
+        "price": 5.5,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Sacherwürstel", "price": 7.9, "tax": 10, "net_price": "" },
+      { "name": "Latte Macchiato", "price": 4.9, "tax": 10, "net_price": "" },
+      { "name": "Croissant", "price": 2.6, "tax": 10, "net_price": "" },
+      { "name": "Orangensaft 0,2L", "price": 3.9, "tax": 20, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Vapiano",
+    "category": "Restaurant/Gastronomie",
+    "items": [
+      { "name": "Pasta Carbonara", "price": 12.9, "tax": 10, "net_price": "" },
+      { "name": "Pizza Margherita", "price": 9.9, "tax": 10, "net_price": "" },
+      { "name": "Insalata Cesare", "price": 9.5, "tax": 10, "net_price": "" },
+      { "name": "Lasagne", "price": 13.5, "tax": 10, "net_price": "" },
+      { "name": "Panna Cotta", "price": 4.9, "tax": 10, "net_price": "" },
+      { "name": "Tiramisu", "price": 5.2, "tax": 10, "net_price": "" },
+      {
+        "name": "Hausgemachte Limonade 0,5L",
+        "price": 3.9,
+        "tax": 20,
+        "net_price": ""
+      },
+      { "name": "Espresso", "price": 2.9, "tax": 10, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Cafe Mozart",
+    "category": "Cafe",
+    "items": [
+      { "name": "Kleiner Brauner", "price": 4.5, "tax": 10, "net_price": "" },
+      { "name": "Kaiserschmarrn", "price": 9.8, "tax": 10, "net_price": "" },
+      { "name": "Sachertorte", "price": 5.9, "tax": 10, "net_price": "" },
+      { "name": "Eiskaffee", "price": 6.4, "tax": 10, "net_price": "" },
+      { "name": "Frühstück Mozart", "price": 13.5, "tax": 10, "net_price": "" },
+      {
+        "name": "Schinken-Käse-Toast",
+        "price": 5.5,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Heiße Schokolade", "price": 5.3, "tax": 10, "net_price": "" },
+      { "name": "Tafelwasser 0,25L", "price": 2.9, "tax": 20, "net_price": "" }
+    ]
+  },
+  {
+    "merchant": "Cafe Sacher Wien",
+    "category": "Cafe",
+    "items": [
+      {
+        "name": "Original Sachertorte Stück",
+        "price": 8.9,
+        "tax": 10,
+        "net_price": ""
+      },
+      { "name": "Wiener Melange", "price": 6.2, "tax": 10, "net_price": "" },
+      { "name": "Eiskaffee", "price": 7.9, "tax": 10, "net_price": "" },
+      { "name": "Kaiserschmarrn", "price": 10.9, "tax": 10, "net_price": "" },
+      { "name": "Belegte Semmel", "price": 4.5, "tax": 10, "net_price": "" },
+      { "name": "Gulaschsuppe", "price": 9.8, "tax": 10, "net_price": "" },
+      { "name": "Cappuccino", "price": 6.4, "tax": 10, "net_price": "" },
+      {
+        "name": "Mineralwasser 0,33L",
+        "price": 4.2,
+        "tax": 20,
+        "net_price": ""
+      }
+    ]
+  }
+]

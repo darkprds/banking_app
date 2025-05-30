@@ -84,10 +84,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="section-title">
-                  <span>Quick Actions</span>
-                  <span><i class="fas fa-sliders-h"></i></span>
-                </div>
                 <div class="quick-actions">
                   <div class="action" onclick="navigateTo('transfer-page')">
                     <div class="action-circle">
@@ -101,13 +97,13 @@
                     </div>
                     <div class="action-text">Cards</div>
                   </div>
-                  <div class="action" onclick="navigateTo('stocks-page')">
+                  <div class="action">
                     <div class="action-circle">
                       <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="action-text">Invest</div>
                   </div>
-                  <div class="action" onclick="navigateTo('exchange-page')">
+                  <div class="action">
                     <div class="action-circle">
                       <i class="fas fa-globe-americas"></i>
                     </div>
@@ -145,14 +141,20 @@
                   <span>Financial Summary</span>
                 </div>
                 <div class="stats-container">
-                  <div class="stat-card">
+                  <div
+                    class="stat-card"
+                    style="padding-right: 0px; padding-left: 15px"
+                  >
                     <div class="stat-title">Monthly Spending</div>
                     <div class="stat-value">€1,200.50</div>
                     <div class="stat-trend">
                       <i class="fas fa-arrow-down"></i> 12% vs last month
                     </div>
                   </div>
-                  <div class="stat-card">
+                  <div
+                    class="stat-card"
+                    style="padding-right: 0px; padding-left: 0px"
+                  >
                     <div class="stat-title">Investments</div>
                     <div class="stat-value">€8,562.45</div>
                     <div class="stat-trend">
@@ -464,7 +466,14 @@
                     Get Tips ✨
                   </button>
                 </div>
-                <div class="chart-container">
+                <div
+                  class="chart-container"
+                  style="
+                    margin-bottom: 5px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                  "
+                >
                   <canvas id="budgetChart"></canvas>
                 </div>
               </div>
