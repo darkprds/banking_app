@@ -17,318 +17,290 @@ function getRandomAmount(min, max) {
   return (Math.random() * (max - min) + min).toFixed(2);
 }
 
-// Pool of items categorized for more realistic receipts
-const itemPool = {
-  Groceries: [
-    { name: "Milk", price: 1.2 },
-    { name: "Bread", price: 2.5 },
-    { name: "Eggs (dozen)", price: 3.0 },
-    { name: "Apples (kg)", price: 2.0 },
-    { name: "Chicken Breast (kg)", price: 8.0 },
-    { name: "Pasta", price: 1.8 },
-    { name: "Cheese", price: 4.5 },
-    { name: "Yogurt", price: 2.2 },
-    { name: "Orange Juice", price: 3.0 },
-    { name: "Cereal", price: 4.0 },
-    { name: "Coffee Beans", price: 7.5 },
-    { name: "Fresh Vegetables", price: 5.0 },
-  ],
-  "Daily Expense": [
-    { name: "Latte", price: 3.5 },
-    { name: "Croissant", price: 1.5 },
-    { name: "Lunch Sandwich", price: 6.0 },
-    { name: "Snack Bar", price: 2.0 },
-    { name: "Bottled Water", price: 1.0 },
-    { name: "Newspaper", price: 1.8 },
-  ],
-  Shopping: [
-    { name: "T-Shirt", price: 25.0 },
-    { name: "Jeans", price: 70.0 },
-    { name: "Sneakers", price: 80.0 },
-    { name: "Novel", price: 18.0 },
-    { name: "Phone Case", price: 20.0 },
-    { name: "Headphones", price: 45.0 },
-  ],
-  Electronics: [
-    { name: "USB-C Cable", price: 10.0 },
-    { name: "Power Bank", price: 30.0 },
-    { name: "Wireless Mouse", price: 25.0 },
-    { name: "Keyboard", price: 60.0 },
-    { name: "Screen Protector", price: 15.0 },
-  ],
-  Entertainment: [
-    { name: "Movie Ticket", price: 12.0 },
-    { name: "Concert Ticket", price: 50.0 },
-    { name: "Streaming Service (1 month)", price: 10.0 },
-    { name: "Video Game", price: 40.0 },
-    { name: "Board Game", price: 35.0 },
-  ],
-  Transportation: [
-    { name: "Bus Ticket", price: 2.8 },
-    { name: "Train Ticket", price: 7.5 },
-    { name: "Fuel (20L)", price: 36.0 },
-    { name: "Taxi Ride", price: 15.0 },
-    { name: "Metro Pass (daily)", price: 8.0 },
-  ],
-  "Health & Fitness": [
-    { name: "Protein Powder", price: 25.0 },
-    { name: "Gym Day Pass", price: 15.0 },
-    { name: "Vitamins", price: 20.0 },
-    { name: "Yoga Class", price: 18.0 },
-    { name: "Sports Drink", price: 3.0 },
-  ],
-  Home: [
-    { name: "Cleaning Supplies", price: 15.0 },
-    { name: "Lightbulb (LED)", price: 5.0 },
-    { name: "Small Appliance", price: 60.0 },
-    { name: "Dish Soap", price: 4.0 },
-    { name: "Laundry Detergent", price: 12.0 },
-  ],
-  Utilities: [
-    { name: "Electricity Usage", price: 60.0 },
-    { name: "Water Bill", price: 30.0 },
-    { name: "Internet Service", price: 45.0 },
-  ],
-  "Dining Out": [
-    { name: "Pizza", price: 18.0 },
-    { name: "Sushi Set", price: 25.0 },
-    { name: "Burger & Fries", price: 14.0 },
-    { name: "Fine Dining Meal", price: 70.0 },
-  ],
-  "Online Purchase": [
-    { name: "Software Subscription", price: 19.99 },
-    { name: "E-book", price: 9.99 },
-    { name: "Online Course", price: 150.0 },
-  ],
-  Other: [
-    { name: "Miscellaneous Item", price: 10.0 },
-    { name: "Service Fee", price: 5.0 },
-    { name: "Donation", price: 20.0 },
-  ],
-};
+/**
+ * Generates a random integer between min (inclusive) and max (inclusive).
+ */
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 /**
- * Generates random receipt items based on a given category.
- * @param {string} category The category of the transaction (e.g., 'Groceries', 'Shopping').
- * @returns {Object} An object containing items, subtotal, tax, and total.
+ * Generates a random date within the last year.
+ * @returns {string} Date string in YYYY-MM-DD format.
  */
-function generateRandomReceiptItems(category) {
-  const relevantItems = itemPool[category] || itemPool["Other"];
-  const numItems = Math.floor(Math.random() * 3) + 1; // 1 to 3 items
-  const items = [];
-  let subtotal = 0;
+function generateNewRandomDate() {
+  const end = new Date(); // Today
+  const start = new Date();
+  start.setFullYear(start.getFullYear() - 1); // One year ago
+  const randomDate = new Date(
+    start.getTime() + Math.random() * (end.getTime() - start.getTime())
+  );
+  const year = randomDate.getFullYear();
+  const month = (randomDate.getMonth() + 1).toString().padStart(2, "0");
+  const day = randomDate.getDate().toString().padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
 
-  for (let i = 0; i < numItems; i++) {
-    const item =
-      relevantItems[Math.floor(Math.random() * relevantItems.length)];
-    const quantity = Math.floor(Math.random() * 2) + 1; // 1 or 2 quantity
-    const itemPrice = item.price * quantity;
-    items.push({
-      name: `${item.name} (x${quantity})`,
-      price: `€${itemPrice.toFixed(2)}`,
-    });
-    subtotal += itemPrice;
+/**
+ * Provides icon and color for a given category name from transactions_v1.json.
+ * @param {string} categoryName The name of the category from the JSON source.
+ * @returns {object} Object with icon class and color hex.
+ */
+function getCategoryDetails(categoryName) {
+  const lowerCategory = categoryName.toLowerCase();
+  let details = { icon: "fas fa-receipt", color: "#777777" }; // Default
+
+  if (
+    lowerCategory.includes("online") ||
+    lowerCategory.includes("versandhandel")
+  ) {
+    details = { icon: "fas fa-shopping-cart", color: "#007bff" };
+  } else if (lowerCategory.includes("buchhandlung")) {
+    details = { icon: "fas fa-book", color: "#ffc107" };
+  } else if (
+    lowerCategory.includes("elektro") ||
+    lowerCategory.includes("elektronik")
+  ) {
+    details = { icon: "fas fa-plug", color: "#fd7e14" };
+  } else if (
+    lowerCategory.includes("lebensmittel") ||
+    lowerCategory.includes("groceries")
+  ) {
+    details = { icon: "fas fa-shopping-basket", color: "#28a745" };
+  } else if (
+    lowerCategory.includes("streaming") ||
+    lowerCategory.includes("video")
+  ) {
+    details = { icon: "fas fa-tv", color: "#dc3545" };
+  } else if (
+    lowerCategory.includes("lieferdienst") ||
+    lowerCategory.includes("essenslieferdienst")
+  ) {
+    details = { icon: "fas fa-motorcycle", color: "#6f42c1" };
+  } else if (
+    lowerCategory.includes("mode") ||
+    lowerCategory.includes("kleidung")
+  ) {
+    details = { icon: "fas fa-tshirt", color: "#e83e8c" };
+  } else if (lowerCategory.includes("drogerie")) {
+    details = { icon: "fas fa-pump-soap", color: "#6610f2" };
+  } else if (lowerCategory.includes("post")) {
+    details = { icon: "fas fa-envelope", color: "#20c997" };
+  } else if (lowerCategory.includes("apotheke")) {
+    details = { icon: "fas fa-pills", color: "#17a2b8" };
+  } else if (
+    lowerCategory.includes("mobilfunk") ||
+    lowerCategory.includes("telefo")
+  ) {
+    details = { icon: "fas fa-mobile-alt", color: "#6f42c1" }; // Magenta-like
+  } else if (
+    lowerCategory.includes("fitness") ||
+    (lowerCategory.includes("sport") && !lowerCategory.includes("sportnahrung"))
+  ) {
+    details = { icon: "fas fa-dumbbell", color: "#ff6347" };
+  } else if (lowerCategory.includes("sportnahrung")) {
+    details = { icon: "fas fa-capsules", color: "#20B2AA" }; // Specific for sport nutrition
+  } else if (
+    lowerCategory.includes("restaurant") ||
+    lowerCategory.includes("gastronomie") ||
+    lowerCategory.includes("cafe")
+  ) {
+    details = { icon: "fas fa-utensils", color: "#d63384" };
+  } else if (lowerCategory.includes("optiker")) {
+    details = { icon: "fas fa-glasses", color: "#0dcaf0" };
+  } else if (lowerCategory.includes("schuhgeschäft")) {
+    details = { icon: "fas fa-shoe-prints", color: "#adb5bd" };
+  } else if (
+    lowerCategory.includes("möbel") ||
+    lowerCategory.includes("home essentials")
+  ) {
+    details = { icon: "fas fa-couch", color: "#ffc107" }; // Ikea yellow
+  } else if (
+    lowerCategory.includes("öffentliche verkehrsmittel") ||
+    lowerCategory.includes("transport")
+  ) {
+    details = { icon: "fas fa-bus", color: "#495057" };
+  } else if (
+    lowerCategory.includes("kaffee") &&
+    !lowerCategory.includes("cafe")
+  ) {
+    // Nespresso specific
+    details = { icon: "fas fa-coffee", color: "#6f4e37" };
+  } else if (lowerCategory.includes("parfümerie")) {
+    details = { icon: "fas fa-spray-can", color: "#f06595" };
+  } else if (lowerCategory.includes("reise")) {
+    details = { icon: "fas fa-plane", color: "#0d6efd" };
+  } else if (lowerCategory.includes("tankstelle")) {
+    details = { icon: "fas fa-gas-pump", color: "#343a40" };
+  }
+  return details;
+}
+
+/**
+ * Generates a specified number of random transactions using data from transactions_v1.json.
+ * @param {Array} sourceData Parsed data from transactions_v1.json.
+ * @param {number} count Number of transactions to generate.
+ * @returns {Array} Array of generated transaction objects.
+ */
+function generateTransactionsFromSource(sourceData, count) {
+  const generatedTransactions = [];
+  if (!sourceData || sourceData.length === 0) {
+    console.error(
+      "Source data for transactions (transactions_v1.json) is empty or invalid."
+    );
+    return [];
   }
 
-  const taxRate = 0.05; // 5% tax
-  const tax = subtotal * taxRate;
-  const totalNumeric = subtotal + tax; // Store numeric total
+  for (let i = 0; i < count; i++) {
+    const randomMerchantData =
+      sourceData[getRandomInt(0, sourceData.length - 1)];
 
-  return {
-    items: items,
-    subtotal: `€${subtotal.toFixed(2)}`,
-    tax: `€${tax.toFixed(2)}`,
-    total: `€${totalNumeric.toFixed(2)}`, // Store formatted total
-    totalNumeric: totalNumeric, // Also return the numeric total
-  };
+    if (!randomMerchantData.items || randomMerchantData.items.length === 0) {
+      // console.warn(\`Merchant ${randomMerchantData.merchant} has no items. Skipping.\`);
+      i--; // Decrement to ensure 'count' transactions are generated if we skip
+      continue;
+    }
+
+    const numItemsInReceipt = getRandomInt(
+      1,
+      Math.min(5, randomMerchantData.items.length)
+    );
+    const receiptItems = [];
+    let receiptSubtotalNetNumeric = 0;
+    let receiptTotalTaxNumeric = 0;
+    let receiptGrandTotalGrossNumeric = 0;
+
+    // Shuffle merchant items to pick distinct ones for the receipt
+    const shuffledMerchantItems = [...randomMerchantData.items].sort(
+      () => 0.5 - Math.random()
+    );
+    const selectedJsonItems = shuffledMerchantItems.slice(0, numItemsInReceipt);
+
+    selectedJsonItems.forEach((jsonItem) => {
+      const quantity = getRandomInt(1, 3);
+      const unitPriceGross = parseFloat(jsonItem.price);
+      const unitTaxRate = parseFloat(jsonItem.tax); // Percentage
+      // Use provided net_price if available and valid, otherwise calculate
+      let unitPriceNet = parseFloat(jsonItem.net_price);
+      if (isNaN(unitPriceNet) || unitPriceNet <= 0) {
+        unitPriceNet = unitPriceGross / (1 + unitTaxRate / 100);
+      }
+
+      const lineTotalGross = quantity * unitPriceGross;
+      const lineTotalNet = quantity * unitPriceNet;
+      const lineTaxAmount = lineTotalGross - lineTotalNet;
+
+      receiptItems.push({
+        name: jsonItem.name,
+        quantity: quantity,
+        unit_price_gross: unitPriceGross, // Gross price per unit
+        unit_price_net: unitPriceNet, // Net price per unit
+        line_total_gross: lineTotalGross, // quantity * unitPriceGross
+        line_total_net: lineTotalNet, // quantity * unitPriceNet
+        tax_rate_percent: unitTaxRate, // Tax rate for this item
+        line_tax_amount: lineTaxAmount, // Tax amount for this line
+        label: jsonItem.label || "", // Include label if present
+      });
+
+      receiptSubtotalNetNumeric += lineTotalNet;
+      receiptTotalTaxNumeric += lineTaxAmount;
+      receiptGrandTotalGrossNumeric += lineTotalGross;
+    });
+
+    const categoryDetails = getCategoryDetails(randomMerchantData.category);
+    const transactionId =
+      Date.now().toString() + "-" + Math.random().toString(36).substring(2, 11);
+
+    generatedTransactions.push({
+      id: transactionId,
+      merchant: randomMerchantData.merchant,
+      category: randomMerchantData.category, // Original category name from JSON
+      amount: `-€${receiptGrandTotalGrossNumeric.toFixed(2)}`, // Transaction amount is the gross total
+      date: generateNewRandomDate(),
+      icon: categoryDetails.icon,
+      color: categoryDetails.color,
+      receipt: {
+        items: receiptItems,
+        subtotal_net: receiptSubtotalNetNumeric.toFixed(2), // Sum of all line_total_net
+        tax: receiptTotalTaxNumeric.toFixed(2), // Sum of all line_tax_amount
+        total: receiptGrandTotalGrossNumeric.toFixed(2), // Sum of all line_total_gross
+      },
+      label:
+        randomMerchantData.items.length > 0
+          ? randomMerchantData.items[0].label || ""
+          : "", // Example: take label from first item or merchant level if available
+    });
+  }
+  return generatedTransactions;
+}
+
+/**
+ * Fetches transaction source data from transactions_v1.json,
+ * generates random transactions, and prepares them for display.
+ */
+async function initializePrimaryTransactions() {
+  try {
+    const response = await fetch("transactions_v1.json");
+    if (!response.ok) {
+      throw new Error(
+        `HTTP error! status: ${response.status} while fetching transactions_v1.json`
+      );
+    }
+    const sourceData = await response.json();
+
+    // Generate, for example, 100 transactions using the JSON data
+    // The global 'transactions' array will be replaced by this new set.
+    transactions = generateTransactionsFromSource(sourceData, 100);
+
+    // Reset display state for pagination if loadTransactions uses it
+    displayedTransactions = 5; // Or your default initial display count
+
+    if (typeof loadTransactions === "function") {
+      loadTransactions(); // This will use the new global 'transactions' array
+    } else {
+      console.error("loadTransactions function is not defined.");
+    }
+  } catch (error) {
+    console.error("Failed to initialize transactions from JSON:", error);
+    // Fallback or error message to user
+    // showMessage("Could not load transaction data. Please try again later.");
+  }
 }
 
 // Initialize transactions array
-const transactions = [];
+let transactions = []; // Ensuring this is 'let' if it's reassigned, or 'const' if only items are pushed. Let for reassignment.
 
-// Merchants, categories, icons, and colors for dynamic transactions
-const dynamicMerchants = {
-  Groceries: ["SuperMart", "FreshFoods", "BioMarket"],
-  "Daily Expense": ["Coffee Corner", "Daily Bites", "QuickStop"],
-  Shopping: ["Fashion Trends", "Bookworm Store", "Gadget World"],
-  Electronics: ["ElectroZone", "TechGadgets Pro"],
-  Entertainment: ["Cinema City", "Game Central", "Concert Hall"],
-  Transportation: ["City Transport", "Fuel Station", "Taxi Service"],
-  "Health & Fitness": ["Gym Central", "Health Pharmacy", "Sports Shop"],
-  Home: ["Home Decor", "Hardware Store"],
-  "Dining Out": ["Italian Bistro", "Sushi Place", "Burger Joint"],
-  "Online Purchase": ["Global Online Store", "App Market"],
-  Other: ["Local Charity", "Random Shop"],
-};
-
-const dynamicCategories = Object.keys(dynamicMerchants);
-const categoryIcons = {
-  Groceries: "fas fa-shopping-basket",
-  "Daily Expense": "fas fa-coffee",
-  Shopping: "fas fa-tshirt",
-  Electronics: "fas fa-laptop",
-  Entertainment: "fas fa-gamepad",
-  Transportation: "fas fa-bus",
-  "Health & Fitness": "fas fa-dumbbell",
-  Home: "fas fa-home",
-  "Dining Out": "fas fa-utensils",
-  "Online Purchase": "fas fa-shopping-cart",
-  Other: "fas fa-question-circle",
-};
-const categoryColors = {
-  Groceries: "#f39c12", // Orange
-  "Daily Expense": "#e74c3c", // Red
-  Shopping: "#34495e", // Dark Blue/Grey
-  Electronics: "#1abc9c", // Turquoise
-  Entertainment: "#8e44ad", // Purple
-  Transportation: "#3498db", // Blue
-  "Health & Fitness": "#27ae60", // Green
-  Home: "#95a5a6", // Grey
-  "Dining Out": "#9b59b6", // Amethyst
-  "Online Purchase": "#0078d7", // Microsoft Blue
-  Other: "#7f8c8d", // Dark Grey
-};
-
-// --- Add Recurring Monthly Transactions (past 12 months) ---
-const today = new Date();
-for (let i = 0; i < 12; i++) {
-  // For the last 12 months
-  const currentMonth = new Date(today.getFullYear(), today.getMonth() - i, 1);
-
-  // Salary (always on the 25th)
-  const salaryDate = new Date(
-    currentMonth.getFullYear(),
-    currentMonth.getMonth(),
-    25
-  );
-  transactions.push({
-    id: `salary-${transactions.length + 1}`,
-    merchant: "Employer Inc.",
-    amount: "+€3,450.00",
-    date: salaryDate
-      .toLocaleDateString("en-GB", {
-        day: "2-digit",
-        month: "short",
-        year: "numeric",
-      })
-      .replace(/ /g, " "),
-    category: "Monthly Salary",
-    icon: "fas fa-money-check-alt",
-    color: "#28a745", // Green
-    receipt: null, // No receipt details for salary
-  });
-
-  // Rent (always on the 1st)
-  const rentDate = new Date(
-    currentMonth.getFullYear(),
-    currentMonth.getMonth(),
-    1
-  );
-  transactions.push({
-    id: `rent-${transactions.length + 1}`,
-    merchant: "Landlord Co.",
-    amount: "-€950.00",
-    date: rentDate
-      .toLocaleDateString("en-GB", {
-        day: "2-digit",
-        month: "short",
-        year: "numeric",
-      })
-      .replace(/ /g, " "),
-    category: "Housing",
-    icon: "fas fa-home",
-    color: "#e67e22", // Orange-brown
-    receipt: null, // No receipt details for rent
-  });
-
-  // Electricity Bill (always on the 15th)
-  const electricityDate = new Date(
-    currentMonth.getFullYear(),
-    currentMonth.getMonth(),
-    15
-  );
-  transactions.push({
-    id: `electricity-${transactions.length + 1}`,
-    merchant: "PowerGrid Utilities",
-    amount: "-€60.00",
-    date: electricityDate
-      .toLocaleDateString("en-GB", {
-        day: "2-digit",
-        month: "short",
-        year: "numeric",
-      })
-      .replace(/ /g, " "),
-    category: "Utilities",
-    icon: "fas fa-lightbulb",
-    color: "#f1c40f", // Yellow
-    receipt: null, // No receipt details for utility bills
-  });
-}
-
-// --- Generate remaining dynamic transactions to reach 100 total ---
-const startDate = new Date(2023, 0, 1); // Jan 1, 2023
-const endDate = new Date(); // Today
-
-const numDynamicTransactionsNeeded = 100 - transactions.length; // Calculate how many more are needed
-
-for (let i = 0; i < numDynamicTransactionsNeeded; i++) {
-  const transactionId = `dynamic-${transactions.length + 1}`;
-  const randomCategory =
-    dynamicCategories[Math.floor(Math.random() * dynamicCategories.length)];
-  const randomMerchant =
-    dynamicMerchants[randomCategory][
-      Math.floor(Math.random() * dynamicMerchants[randomCategory].length)
-    ];
-  const randomIcon = categoryIcons[randomCategory];
-  const randomColor = categoryColors[randomCategory];
-  const date = getRandomDate(startDate, endDate);
-
-  const isExpense = Math.random() < 0.9; // Higher chance of being an expense
-  const receiptData = generateRandomReceiptItems(randomCategory); // Get receipt and numeric total
-  const amount = isExpense
-    ? -receiptData.totalNumeric
-    : receiptData.totalNumeric;
-
-  transactions.push({
-    id: transactionId,
-    merchant: randomMerchant,
-    amount: `${isExpense ? "" : "+"}${amount.toFixed(2)}`, // Format amount here
-    date: date,
-    category: randomCategory,
-    icon: randomIcon,
-    color: randomColor,
-    receipt: {
-      // Reconstruct receipt to only include what's needed
-      items: receiptData.items,
-      subtotal: receiptData.subtotal,
-      tax: receiptData.tax,
-      total: receiptData.total,
-    },
-  });
-}
-
-let displayedTransactions = 5; // Number of transactions initially displayed
-let myChart; // Variable to hold the Chart.js instance
-let budgetChart; // Variable to hold the Budget Chart.js instance
-let transactionHistory = []; // To store navigation history for back button
+let displayedTransactions = 5; // Ensure this is defined if not already (it was in the provided snippet)
+let myChart;
+let budgetChart;
+let transactionHistory = []; // Assuming this is for a different feature or can be populated as needed.
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadTransactions();
-  renderAccountChart();
-  renderBudgetChart(); // Render budget chart on load
-  // Initialize transaction history with the home page
-  transactionHistory.push("home-page");
+  // Prioritize loading transactions from JSON
+  initializePrimaryTransactions().then(() => {
+    // Any other initializations that depend on transactions can go here
+    // For example, if charts need to be rendered after transactions are loaded:
+    if (typeof renderAccountChart === "function") renderAccountChart();
+    if (typeof renderBudgetChart === "function") renderBudgetChart();
+  });
 
-  // Add event listener for search input
-  const searchInput = document.getElementById("transaction-search");
-  if (searchInput) {
-    searchInput.addEventListener("input", (event) => {
-      const query = event.target.value.toLowerCase();
+  // Keep other event listeners and initial setup not related to transaction data generation
+  const transactionSearch = document.getElementById("transaction-search");
+  if (transactionSearch) {
+    transactionSearch.addEventListener("input", (e) => {
+      const query = e.target.value.toLowerCase();
       const filtered = filterTransactions(query);
-      displayedTransactions = 5; // Reset displayed count for filtered results
       loadTransactions(filtered);
     });
   }
+
+  const showMoreBtn = document.getElementById("show-more-btn");
+  if (showMoreBtn) {
+    showMoreBtn.addEventListener("click", loadMoreTransactions);
+  }
+  // ... other initializations from the original DOMContentLoaded
 });
 
 function navigateTo(pageId) {
@@ -386,7 +358,9 @@ function filterTransactions(query) {
     if (transaction.receipt && transaction.receipt.items) {
       transaction.receipt.items.forEach((item) => {
         searchableText.push(String(item.name).toLowerCase());
-        searchableText.push(String(item.price).toLowerCase());
+        // searchableText.push(String(item.price).toLowerCase()); // OLD - item.price no longer directly on receipt item
+        searchableText.push(String(item.unit_price_gross).toLowerCase()); // NEW - search by unit gross price
+        searchableText.push(String(item.line_total_gross).toLowerCase()); // NEW - search by line total gross price
       });
     }
 
@@ -491,30 +465,44 @@ function showTransactionDetail(transaction) {
 
   const receiptItemsList = document.getElementById("receipt-items-list");
   receiptItemsList.innerHTML = "";
-  if (transaction.receipt && transaction.receipt.items) {
+  if (
+    transaction.receipt &&
+    transaction.receipt.items &&
+    transaction.receipt.items.length > 0
+  ) {
     transaction.receipt.items.forEach((item) => {
       const itemDiv = document.createElement("div");
       itemDiv.classList.add("receipt-item");
+      // OLD:
+      // itemDiv.innerHTML = `
+      //           <div class="receipt-item-name">${item.name}</div>
+      //           <div class="receipt-item-price">${item.price}</div>
+      //       `;
+      // NEW:
       itemDiv.innerHTML = `
-                <div class="receipt-item-name">${item.name}</div>
-                <div class="receipt-item-price">${item.price}</div>
+                <div class="receipt-item-name">${item.quantity} x ${
+        item.name
+      } (@ €${item.unit_price_gross.toFixed(2)})</div>
+                <div class="receipt-item-price">€${item.line_total_gross.toFixed(
+                  2
+                )}</div>
             `;
       receiptItemsList.appendChild(itemDiv);
     });
     document.getElementById("receipt-subtotal").textContent =
-      transaction.receipt.subtotal;
+      "€" + transaction.receipt.subtotal_net; // Ensure currency symbol if not already part of the string
     document.getElementById("receipt-tax").textContent =
-      transaction.receipt.tax;
+      "€" + transaction.receipt.tax; // Ensure currency symbol
     document.getElementById("receipt-total").textContent =
-      transaction.receipt.total;
+      "€" + transaction.receipt.total; // Ensure currency symbol
   } else {
     // Handle cases where no receipt items are available
     receiptItemsList.innerHTML =
       '<div class="receipt-item">No detailed receipt available.</div>';
     document.getElementById("receipt-subtotal").textContent =
-      transaction.amount;
+      transaction.amount; // Or format appropriately if it's just a number string
     document.getElementById("receipt-tax").textContent = "€0.00";
-    document.getElementById("receipt-total").textContent = transaction.amount;
+    document.getElementById("receipt-total").textContent = transaction.amount; // Or format
   }
 
   // Set amount color based on positive/negative
@@ -854,15 +842,18 @@ async function getFinancialInsights() {
       let transactionDetails = `Transaction ID: ${t.id}, Merchant: ${t.merchant}, Amount: ${t.amount}, Date: ${t.date}, Category: ${t.category}`;
       if (t.receipt && t.receipt.items && t.receipt.items.length > 0) {
         const items = t.receipt.items
-          .map((item) => `${item.name} (${item.price})`)
+          // OLD: .map((item) => `${item.name} (${item.price})`)
+          // NEW: Using unit gross price for conciseness in the prompt
+          .map((item) => `${item.name} (@€${item.unit_price_gross.toFixed(2)})`)
           .join("; ");
         transactionDetails += `, Receipt Items: [${items}]`;
         // Add subtotal, tax, and total if available in receipt
-        if (t.receipt.subtotal)
-          transactionDetails += `, Subtotal: ${t.receipt.subtotal}`;
-        if (t.receipt.tax) transactionDetails += `, Tax: ${t.receipt.tax}`;
+        if (t.receipt.subtotal_net)
+          // Updated to subtotal_net
+          transactionDetails += `, Subtotal (Net): €${t.receipt.subtotal_net}`;
+        if (t.receipt.tax) transactionDetails += `, Tax: €${t.receipt.tax}`;
         if (t.receipt.total)
-          transactionDetails += `, Total: ${t.receipt.total}`;
+          transactionDetails += `, Total (Gross): €${t.receipt.total}`;
       }
       // Assuming a generic card detail if not explicitly in transaction data
       transactionDetails += `, Card Used: •••• 3568 (Personal)`;
@@ -872,16 +863,7 @@ async function getFinancialInsights() {
     })
     .join(" ||| "); // Use a very strong separator between full transaction records
 
-  const prompt = `You are an expert bank clerk and financial advisor. You have access to the following transaction, card, and receipt details, including items and their prices, as well as transaction details and discounts (if any).
-
-Here is the transaction data:
-${allTransactionsContext}
-
-Based on this data, please answer the user's question. If the information is not explicitly available in the provided data, state that you cannot access real-time or more granular details beyond what is given. Do not make up information.
-
-User's Question: "${userQuery}"
-
-Provide a concise, helpful, and professional answer.`;
+  const prompt = `You are an expert bank clerk and financial advisor. You have access to the following transaction, card, and receipt details, including items and their prices, as well as transaction details and discounts (if any).\n\nHere is the transaction data:\n${allTransactionsContext}\n\nBased on this data, please answer the user's question. If the information is not explicitly available in the provided data, state that you cannot access real-time or more granular details beyond what is given. Do not make up information.\n\nUser's Question: \"${userQuery}\"\n\nProvide a concise, helpful, and professional answer.`;
 
   try {
     let chatHistory = [];
