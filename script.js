@@ -218,7 +218,7 @@ function generateTransactionsFromSource(sourceData, count) {
       merchant: randomMerchantData.merchant,
       category: randomMerchantData.category, // Original category name from JSON
       amount: `-€${receiptGrandTotalGrossNumeric.toFixed(2)}`, // Transaction amount is the gross total
-      date: generateNewRandomDate(),
+      date: generateNewRandomDate(), // Uses YYYY-MM-DD
       icon: categoryDetails.icon,
       color: categoryDetails.color,
       receipt: {
@@ -237,6 +237,94 @@ function generateTransactionsFromSource(sourceData, count) {
 }
 
 /**
+ * Generates fixed monthly recurring transactions for the current month.
+ * @returns {Array} Array of fixed transaction objects.
+ */
+function generateRecurringMonthlyTransactions() {
+  const fixedTransactions = [];
+  const today = new Date(2025, 4, 30); // Current date: May 30, 2025 (Month is 0-indexed)
+  const currentYear = today.getFullYear();
+  const currentMonth = today.getMonth(); // 0 for January, 4 for May
+
+  const formatDate = (date) => {
+    // Returns YYYY-MM-DD to be consistent with generateNewRandomDate()
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, "0");
+    const day = date.getDate().toString().padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  };
+
+  // Salary
+  fixedTransactions.push({
+    id: `salary-${currentYear}-${currentMonth + 1}-01`,
+    merchant: "Your Company Ltd.",
+    category: "Salary",
+    amount: "+€3450.00",
+    date: formatDate(new Date(currentYear, currentMonth, 1)),
+    icon: "fas fa-money-bill-wave",
+    color: "#28a745", // Green for income
+    receipt: null,
+    label: "Monthly Salary May 2025",
+  });
+
+  // Rent
+  fixedTransactions.push({
+    id: `rent-${currentYear}-${currentMonth + 1}-01`,
+    merchant: "Landlord Properties GmbH",
+    category: "Housing",
+    amount: "-€881.96",
+    date: formatDate(new Date(currentYear, currentMonth, 1)),
+    icon: "fas fa-home",
+    color: "#dc3545", // Red for expense
+    receipt: null,
+    label: "Rent Payment May 2025",
+  });
+
+  // Insurance
+  fixedTransactions.push({
+    id: `insurance-${currentYear}-${currentMonth + 1}-05`,
+    merchant: "SecureLife Insurance AG",
+    category: "Insurance",
+    amount: "-€50.00", // Placeholder
+    date: formatDate(new Date(currentYear, currentMonth, 5)),
+    icon: "fas fa-shield-alt",
+    color: "#17a2b8", // Teal
+    receipt: null,
+    label: "General Insurance May 2025",
+  });
+
+  // Wiener Linien Jahreskarte (Annual Ticket - Monthly Cost)
+  const annualTicketCost = 365.0;
+  const monthlyTicketCost = (annualTicketCost / 12).toFixed(2);
+  fixedTransactions.push({
+    id: `transport-${currentYear}-${currentMonth + 1}-10`,
+    merchant: "Wiener Linien",
+    category: "Transport",
+    amount: `-€${monthlyTicketCost}`,
+    date: formatDate(new Date(currentYear, currentMonth, 10)),
+    icon: "fas fa-bus",
+    color: "#6c757d", // Grey
+    receipt: null,
+    label: "Wiener Linien Monthly Ticket Cost May 2025",
+  });
+
+  // Utilities
+  fixedTransactions.push({
+    id: `utilities-${currentYear}-${currentMonth + 1}-15`,
+    merchant: "City Energy & Water",
+    category: "Utilities",
+    amount: "-€75.00", // Placeholder
+    date: formatDate(new Date(currentYear, currentMonth, 15)),
+    icon: "fas fa-bolt",
+    color: "#ffc107", // Yellow
+    receipt: null,
+    label: "Utilities (Energy, Water) May 2025",
+  });
+
+  return fixedTransactions;
+}
+
+/**
  * Fetches transaction source data from transactions_v1.json,
  * generates random transactions, and prepares them for display.
  */
@@ -250,9 +338,15 @@ async function initializePrimaryTransactions() {
     }
     const sourceData = await response.json();
 
-    // Generate, for example, 100 transactions using the JSON data
+    // Generate random transactions using the JSON data
+    const randomTransactions = generateTransactionsFromSource(sourceData, 100);
+
+    // Generate fixed recurring monthly transactions
+    const recurringMonthlyTransactions = generateRecurringMonthlyTransactions();
+
+    // Combine fixed and random transactions
     // The global 'transactions' array will be replaced by this new set.
-    transactions = generateTransactionsFromSource(sourceData, 100);
+    transactions = [...recurringMonthlyTransactions, ...randomTransactions];
 
     // Reset display state for pagination if loadTransactions uses it
     displayedTransactions = 5; // Or your default initial display count

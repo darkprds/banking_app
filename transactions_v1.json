@@ -1,7 +1,7 @@
 [
   {
     "merchant": "Amazon",
-    "category": "Online-Versandhandel",
+    "category": "Online Retail",
     "items": [
       {
         "name": "Crocs Unisex Classic Clog",
@@ -77,7 +77,7 @@
   },
   {
     "merchant": "Thalia",
-    "category": "Buchhandlung",
+    "category": "Bookstore",
     "items": [
       {
         "name": "Der Gesang der Flusskrebse",
@@ -153,7 +153,7 @@
   },
   {
     "merchant": "MediaMarkt",
-    "category": "Elektrofachgeschäft",
+    "category": "Electronics Store",
     "items": [
       {
         "name": "Samsung Galaxy S23 5G (128GB)",
@@ -229,7 +229,7 @@
   },
   {
     "merchant": "Spar",
-    "category": "Lebensmittelgeschäft",
+    "category": "Grocery Store",
     "items": [
       {
         "name": "Kornspitz",
@@ -445,7 +445,7 @@
   },
   {
     "merchant": "Netflix",
-    "category": "Video-Streamingdienst",
+    "category": "Video Streaming Service",
     "items": [
       {
         "name": "Premium-Abo (monatlich)",
@@ -458,7 +458,7 @@
   },
   {
     "merchant": "Lieferando",
-    "category": "Online-Essenslieferdienst",
+    "category": "Online Food Delivery",
     "items": [
       {
         "name": "Pizza Margherita",
@@ -534,7 +534,7 @@
   },
   {
     "merchant": "Zalando",
-    "category": "Modegeschäft online",
+    "category": "Online Fashion Store",
     "items": [
       {
         "name": "Levi's 501 Original Jeans",
@@ -610,7 +610,7 @@
   },
   {
     "merchant": "Peek&Cloppenburg",
-    "category": "Modegeschäft",
+    "category": "Fashion Store",
     "items": [
       {
         "name": "Tommy Hilfiger Hemd",
@@ -686,7 +686,7 @@
   },
   {
     "merchant": "Billa",
-    "category": "Lebensmittelgeschäft",
+    "category": "Grocery Store",
     "items": [
       {
         "name": "Vollkornbrot",
@@ -797,7 +797,7 @@
   },
   {
     "merchant": "Hofer",
-    "category": "Lebensmittelgeschäft",
+    "category": "Grocery Store",
     "items": [
       {
         "name": "Kaisersemmerl",
@@ -908,7 +908,7 @@
   },
   {
     "merchant": "Lidl",
-    "category": "Lebensmittelgeschäft",
+    "category": "Grocery Store",
     "items": [
       {
         "name": "Sonnenblumenbrot",
@@ -1019,7 +1019,7 @@
   },
   {
     "merchant": "Bipa",
-    "category": "Drogerie",
+    "category": "Drugstore",
     "items": [
       {
         "name": "Denkmit Waschmittel 20WL",
@@ -1130,7 +1130,7 @@
   },
   {
     "merchant": "Etsan",
-    "category": "Lebensmittelgeschäft",
+    "category": "Grocery Store",
     "items": [
       {
         "name": "Pide Fladenbrot",
@@ -1241,7 +1241,7 @@
   },
   {
     "merchant": "Post",
-    "category": "Post",
+    "category": "Post Office",
     "items": [
       {
         "name": "Standardbrief Inland (bis 20g)",
@@ -1282,7 +1282,7 @@
   },
   {
     "merchant": "Essenz Apotheke Mariahilf",
-    "category": "Apotheke",
+    "category": "Pharmacy",
     "items": [
       {
         "name": "Aspirin Tabletten 20 Stück",
@@ -1323,7 +1323,7 @@
   },
   {
     "merchant": "Magenta",
-    "category": "Mobiltelefongeschäft",
+    "category": "Mobile Phone Store",
     "items": [
       {
         "name": "Mobile Sim Only Unlimited",
@@ -1350,7 +1350,7 @@
   },
   {
     "merchant": "Apple Store",
-    "category": "Elektronikgroßmarkt",
+    "category": "Electronics Superstore",
     "items": [
       {
         "name": "MacBook Air M3 13\" 256GB",
@@ -1418,7 +1418,7 @@
   },
   {
     "merchant": "Bershka",
-    "category": "Modegeschäft",
+    "category": "Fashion Store",
     "items": [
       {
         "name": "Oversize T-Shirt",
@@ -1445,7 +1445,7 @@
   },
   {
     "merchant": "Zara",
-    "category": "Modegeschäft",
+    "category": "Fashion Store",
     "items": [
       {
         "name": "Slim Fit Jeans",
@@ -1521,7 +1521,7 @@
   },
   {
     "merchant": "Sportnahrung",
-    "category": "Sportnahrungsgeschäft",
+    "category": "Sports Nutrition Store",
     "items": [
       {
         "name": "Whey Protein 1kg",
@@ -1597,7 +1597,7 @@
   },
   {
     "merchant": "Boss Mensware Store",
-    "category": "Modegeschäft",
+    "category": "Fashion Store",
     "items": [
       {
         "name": "Business Anzug",
@@ -1673,7 +1673,7 @@
   },
   {
     "merchant": "Türkis",
-    "category": "Restaurant/Gastronomie",
+    "category": "Restaurant/Gastronomy",
     "items": [
       {
         "name": "Kebap im Brot",
@@ -1749,7 +1749,7 @@
   },
   {
     "merchant": "Fielmann",
-    "category": "Optiker",
+    "category": "Optician",
     "items": [
       {
         "name": "Brillengestell Standard",
@@ -1825,7 +1825,7 @@
   },
   {
     "merchant": "Foot Locker",
-    "category": "Schuhgeschäft",
+    "category": "Shoe Store",
     "items": [
       {
         "name": "Nike Air Force 1",
@@ -1901,7 +1901,7 @@
   },
   {
     "merchant": "Humanic",
-    "category": "Schuhgeschäft",
+    "category": "Shoe Store",
     "items": [
       {
         "name": "Tamaris Sandalen",
@@ -1977,7 +1977,7 @@
   },
   {
     "merchant": "Hollister",
-    "category": "Modegeschäft",
+    "category": "Fashion Store",
     "items": [
       {
         "name": "Hoodie",
@@ -2053,7 +2053,7 @@
   },
   {
     "merchant": "Ikea",
-    "category": "Möbel und Home essentials",
+    "category": "Furniture and Home Essentials",
     "items": [
       {
         "name": "BILLY Regal",
@@ -2129,7 +2129,7 @@
   },
   {
     "merchant": "Interspar",
-    "category": "Lebensmittelgeschäft",
+    "category": "Grocery Store",
     "items": [
       {
         "name": "Sonnenblumenbrot",
@@ -2205,7 +2205,7 @@
   },
   {
     "merchant": "Jack&Jones",
-    "category": "Modegeschäft",
+    "category": "Fashion Store",
     "items": [
       {
         "name": "Jeans Slim Fit",
@@ -2281,7 +2281,7 @@
   },
   {
     "merchant": "Wiener Linien",
-    "category": "öffentliche Verkehrsmittel",
+    "category": "Public Transport",
     "items": [
       {
         "name": "Einzelfahrschein",
@@ -2301,7 +2301,7 @@
   },
   {
     "merchant": "Massi Milano",
-    "category": "Modegeschäft",
+    "category": "Fashion Store",
     "items": [
       {
         "name": "Armbanduhr Classico",
@@ -2363,7 +2363,7 @@
   },
   {
     "merchant": "Michael Kors",
-    "category": "Modegeschäft",
+    "category": "Fashion Store",
     "items": [
       {
         "name": "Handtasche Jet Set",
@@ -2425,7 +2425,7 @@
   },
   {
     "merchant": "Nespresso",
-    "category": "Kaffeegeschäft",
+    "category": "Coffee Shop",
     "items": [
       {
         "name": "Kaffeekapseln (10 Stück)",
@@ -2487,7 +2487,7 @@
   },
   {
     "merchant": "Notino",
-    "category": "Parfümerie",
+    "category": "Perfumery",
     "items": [
       {
         "name": "Chanel N°5 Eau de Parfum 50ml",
@@ -2549,7 +2549,7 @@
   },
   {
     "merchant": "D&M",
-    "category": "Drogerie",
+    "category": "Drugstore",
     "items": [
       {
         "name": "Balea Duschgel 300ml",
@@ -2611,7 +2611,7 @@
   },
   {
     "merchant": "Müller",
-    "category": "Drogerie",
+    "category": "Drugstore",
     "items": [
       {
         "name": "Nivea Duschgel 250ml",
@@ -2673,7 +2673,7 @@
   },
   {
     "merchant": "Nike",
-    "category": "Sportwaren",
+    "category": "Sportswear",
     "items": [
       {
         "name": "Nike Air Max 90",
@@ -2735,7 +2735,7 @@
   },
   {
     "merchant": "TUI das Reisebüro",
-    "category": "Reise",
+    "category": "Travel",
     "items": [
       {
         "name": "Pauschalreise Mallorca 7 Tage",
@@ -2797,7 +2797,7 @@
   },
   {
     "merchant": "XXXLutz",
-    "category": "Möbel und Home essentials",
+    "category": "Furniture and Home Essentials",
     "items": [
       {
         "name": "Esstisch Holz",
@@ -2983,7 +2983,7 @@
   },
   {
     "merchant": "Vapiano",
-    "category": "Restaurant/Gastronomie",
+    "category": "Restaurant/Gastronomy",
     "items": [
       {
         "name": "Pasta Carbonara",
@@ -3169,7 +3169,7 @@
   },
   {
     "merchant": "OMV",
-    "category": "Tankstelle",
+    "category": "Gas Station",
     "items": [
       {
         "name": "Diesel 35,0L",
@@ -3245,7 +3245,7 @@
   },
   {
     "merchant": "BP",
-    "category": "Tankstelle",
+    "category": "Gas Station",
     "items": [
       {
         "name": "Diesel 30,0L",
